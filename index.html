@@ -533,6 +533,99 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .triple { display: flex; gap: clamp(24px, 4vw, 72px); flex-wrap: wrap; margin-top: clamp(40px, 7vh, 90px); }
 .triple .display--md { line-height: 1; }
 
+/* ── 11b · Selective partnerships ─────────────────────────────────────────── */
+.select { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: clamp(40px, 6vw, 100px); }
+.select__count { transition: opacity 1.4s var(--ease); }
+.select__lines { display: grid; gap: clamp(16px, 2.8vh, 34px); justify-items: end; text-align: right; }
+.select__lines .display--sm { line-height: 1.08; }
+.select__lines .display--md { line-height: 1.02; }
+.slide.s2 .select__lines [data-step="1"] { opacity: .32; }
+.slide.s3 .select__lines [data-step="1"] { opacity: .16; }
+.slide.s3 .select__lines [data-step="2"] { opacity: .32; }
+.slide.s3 .select__count { opacity: .4; }
+
+/* ── 11c · Enter the ecosystem ────────────────────────────────────────────── */
+.pjeco text { font-size: 13px; }
+.pjeco text.eco__core { font-size: 22px; }
+.pjeco text.eco__cap { font-size: 10px; }
+.pjeco text.eco__project { font-family: var(--serif); font-weight: 400; font-size: 24px; letter-spacing: .2em; fill: var(--ivory); }
+.pjeco text.eco__project-tag { font-size: 10px; letter-spacing: .5em; fill: var(--champagne); }
+.pjeco .halo { transform-origin: 800px 100px; }
+.pjeco .eco__bns { transition: opacity 1.2s var(--ease); }
+.slide.s1 .pjeco .eco__bns { opacity: 0; }
+.slide.s3 .pjeco__st[data-step="2"] { opacity: 0; transition: opacity .6s var(--ease); }
+
+/* ── 11d · We match your commitment ───────────────────────────────────────── */
+.match { position: absolute; inset: 0; }
+.match__head { position: absolute; left: var(--pad); right: var(--pad); top: clamp(38px, 5.5vh, 60px); text-align: center; transition: opacity 1.2s var(--ease); }
+.match__head .eyebrow { margin: 0 0 clamp(8px, 1.2vh, 14px); }
+.match__layer { position: absolute; inset: 0; padding: var(--pad-y) var(--pad); display: grid; place-items: center; transition: opacity 1.4s var(--ease), transform 2s var(--ease); }
+.match__ledger { padding-top: calc(var(--pad-y) + 2vh); }
+.slide.s2 .match__ledger, .slide.s2 .match__head { opacity: 0; transform: scale(1.1); pointer-events: none; }
+.slide.s3 .match__sum { opacity: 0; transform: scale(1.1); pointer-events: none; }
+.ledger { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(28px, 4vw, 80px); width: min(100%, 1280px); align-items: start; }
+.ledger__col { display: grid; justify-items: center; text-align: center; gap: clamp(8px, 1.4vh, 16px); }
+.ledger__col .eyebrow { margin-bottom: clamp(6px, 1vh, 12px); }
+.ledger__col .count--md { line-height: .9; }
+.ledger__rule { align-self: stretch; min-height: 38vh; background: var(--line); }
+.stem { width: 1px; height: clamp(22px, 4vh, 40px); background: var(--accent); opacity: .8; }
+.ledger__items { display: grid; gap: clamp(8px, 1.3vh, 14px); justify-items: center; }
+.ledger__items span { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 26px); letter-spacing: .16em; text-transform: uppercase; line-height: 1.15; }
+.ledger__items span.hi { color: var(--accent); }
+.ledger__items .ledger__plus { font-weight: 300; color: var(--accent); font-size: clamp(20px, 2vw, 34px); line-height: .8; }
+.ledger__items .ledger__note { font-family: var(--serif); font-style: italic; font-size: clamp(13px, 1vw, 17px); letter-spacing: .04em; text-transform: none; color: var(--fg-soft); }
+.sum__in { display: grid; justify-items: center; text-align: center; width: 100%; }
+.sum__in .eyebrow { margin-bottom: clamp(30px, 5vh, 60px); }
+.sum { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: clamp(18px, 2.6vw, 52px); width: min(100%, 1360px); }
+.sum__cell { display: grid; justify-items: center; gap: clamp(8px, 1.4vh, 16px); }
+.sum__cell .count--md { line-height: .9; }
+.sum__cell .serif-caps { font-size: clamp(15px, 1.35vw, 24px); line-height: 1.25; }
+.sum__cell .caps.accent { color: var(--accent); }
+.sum__cell--result .serif-caps { color: var(--accent); font-size: clamp(20px, 2vw, 36px); }
+.sum__op { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5vw, 96px); line-height: 1; color: var(--champagne); }
+.match__msg { text-align: center; }
+.match__msg-in { position: relative; transition: transform 2s var(--ease); }
+.slide.s4 .match__msg-in { transform: translateY(-11vh); }
+.match__msg-in .display--md { line-height: 1.04; }
+.match__both { position: absolute; top: 100%; left: 50%; width: max-content; max-width: 90vw; transform: translateX(-50%); padding-top: clamp(30px, 5vh, 60px); }
+.match__both.in { transform: translateX(-50%); }
+.match__both .rule--short { margin: 0 auto clamp(18px, 3vh, 32px); }
+.match__both .display--sm { margin-bottom: .2em; color: var(--fg-mute); }
+
+/* ── 11e · The temporary advance ──────────────────────────────────────────── */
+.adv { position: absolute; inset: 0; }
+.adv__layer { position: absolute; inset: 0; padding: var(--pad-y) var(--pad); display: grid; place-items: center; text-align: center; transition: opacity 1.4s var(--ease), transform 2s var(--ease); }
+.adv__layer .display--md { line-height: 1.04; }
+.slide.s1 .adv__h { opacity: 0; transform: scale(1.1); pointer-events: none; }
+.slide.s2 .adv__loop { opacity: .1; transform: scale(1.05); }
+.slide.s4 .adv__loop { opacity: 0; }
+.slide.s3 .adv__a { opacity: 0; transform: scale(1.1); pointer-events: none; }
+.slide.s4 .adv__b { opacity: 0; transform: scale(1.1); pointer-events: none; }
+.adv__fig { position: relative; width: min(64vh, 56vw); aspect-ratio: 1; }
+.adv__fig svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.adv__fig .ring { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 8; transform-origin: 350px 350px; animation: spin 220s linear infinite; }
+.adv__fig .ring--far { stroke: rgba(250,246,239,.09); stroke-dasharray: 1 16; animation: spin 340s linear infinite reverse; }
+.adv__fig .loop { fill: none; stroke: var(--champagne); stroke-width: 1; opacity: .75; }
+.adv__fig .loop--main { transition: stroke-dashoffset 4.2s linear var(--d, 0s), opacity 1s var(--ease) var(--d, 0s); }
+.adv__fig .loop--return { stroke-width: 1.6; opacity: 1; transition: stroke-dashoffset 1.4s linear var(--d, 0s), opacity 1s var(--ease) var(--d, 0s); }
+.adv__fig .dot { fill: var(--ivory); }
+.adv__fig .dot--on { fill: var(--champagne); }
+.adv__fig .dotpulse { fill: none; stroke: var(--champagne); stroke-width: 1; }
+.adv__fig .rider { fill: var(--champagne); }
+.adv__fig .rider-glow { fill: var(--champagne); opacity: .7; }
+.adv__fig text { font-family: var(--sans); font-weight: 500; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; fill: var(--fg); }
+.adv__fig text.hi { fill: var(--champagne); }
+.adv__fig text.amt { font-family: var(--serif); font-weight: 400; font-size: 28px; letter-spacing: .08em; }
+.adv__fig text.amt .cur { font-size: 16px; fill: var(--champagne); baseline-shift: 30%; }
+.adv__note { position: absolute; left: var(--pad); right: var(--pad); bottom: clamp(26px, 4vh, 44px); margin: 0; text-align: center; font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--fg-soft); }
+.slide.s4 .adv__note { opacity: 0; }
+.adv__lines { display: grid; gap: clamp(18px, 3.2vh, 40px); }
+.adv__lines .display--sm { line-height: 1.08; }
+.adv__final .meet__in { transform: none; }
+.adv__final .meet__x { margin: clamp(10px, 2vh, 24px) 0; }
+.adv__final .cover__rule { margin: clamp(22px, 3.6vh, 40px) 0; }
+.slide .adv .adv__final .meet__in { transform: none; }
+
 /* ── 12 · Talent ───────────────────────────────────────────────────────────── */
 .talent { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(30px, 5vw, 90px); align-items: center; }
 .talent__ring { position: relative; width: 100%; max-width: min(66vh, 680px); margin-left: auto; }
@@ -1358,6 +1451,362 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
     </div>
   </section>
 
+  <!-- ══ 11b · SELECTIVE PARTNERSHIPS ═════════════════════════════════════ -->
+  <section class="slide" data-section="5" data-name="Miami Growth Strategy" data-title="Selective partnerships">
+    <div class="media"><div class="media__img" data-photo="southOfFifth"></div><div class="media__veil"></div></div>
+    <div class="slide__inner slide__inner--end">
+      <div class="select">
+        <div class="select__count">
+          <p class="eyebrow r">03 · Developer partnerships · South Florida</p>
+          <div class="count r" style="--d:.3s"><span data-count="170" data-suffix="+">0+</span></div>
+          <p class="caps count__cap r" style="--d:.6s">New developments</p>
+        </div>
+        <div class="select__lines">
+          <p class="display display--sm" data-step="1" style="--d:0s">We don't want<br>to represent them all.</p>
+          <p class="display display--sm" data-step="1" style="--d:.6s">We select<br><span class="accent">what we believe in.</span></p>
+          <p class="display display--sm" data-step="2" style="--d:0s">A limited number of projects.<br>A deeper level of commitment.</p>
+          <p class="display display--md" data-step="3" style="--d:0s">When we believe,<br><span class="accent">we go all in.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 11c · ENTER THE ECOSYSTEM ════════════════════════════════════════ -->
+  <section class="slide" data-section="5" data-name="Miami Growth Strategy" data-title="Enter the ecosystem">
+    <div class="eco pjeco">
+      <!-- Eleven touchpoints on a 540×380 orbit around the B&S LUXURY core
+           (800,480 r150). Step 1: the project takes the seat at the centre and
+           is wired to every node. Step 2: the nodes connect to each other. -->
+      <svg viewBox="140 -70 1320 1025" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <ellipse class="ring" cx="800" cy="480" rx="540" ry="380"/>
+        <!-- spokes: the ecosystem as it stands -->
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="800" y2="220" style="--d:0.90s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="1024.5" y2="234.1" style="--d:1.00s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="1196" y2="352.7" style="--d:1.10s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="1235" y2="524" style="--d:1.20s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="1122.7" y2="676.7" style="--d:1.30s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="913.6" y2="752.3" style="--d:1.40s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="686.4" y2="752.3" style="--d:1.50s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="477.3" y2="676.7" style="--d:1.60s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="365" y2="524" style="--d:1.70s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="404" y2="352.7" style="--d:1.80s"/>
+        <line class="spoke draw" pathLength="1" x1="800" y1="480" x2="575.5" y2="234.1" style="--d:1.90s"/>
+        <!-- step 1: the project is wired to every node -->
+        <g>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="800" y1="330" x2="800" y2="220" style="--d:0.60s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="901.1" y1="369.2" x2="1024.5" y2="234.1" style="--d:0.72s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="942.8" y1="434.1" x2="1196" y2="352.7" style="--d:0.84s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="949.2" y1="495.1" x2="1235" y2="524" style="--d:0.96s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="928.1" y1="558.1" x2="1122.7" y2="676.7" style="--d:1.08s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="857.8" y1="618.4" x2="913.6" y2="752.3" style="--d:1.20s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="742.2" y1="618.4" x2="686.4" y2="752.3" style="--d:1.32s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="671.9" y1="558.1" x2="477.3" y2="676.7" style="--d:1.44s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="650.8" y1="495.1" x2="365" y2="524" style="--d:1.56s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="657.2" y1="434.1" x2="404" y2="352.7" style="--d:1.68s"/>
+          <line class="mesh draw" data-step="1" pathLength="1" x1="698.9" y1="369.2" x2="575.5" y2="234.1" style="--d:1.80s"/>
+        </g>
+        <!-- step 2: the nodes talk to each other — multiple touchpoints -->
+        <g>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="917.5" y1="124.3" x2="994" y2="140.1" style="--d:0.10s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="1169.5" y1="223.3" x2="1213.6" y2="259.1" style="--d:0.20s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="1311.2" y1="420.1" x2="1314.5" y2="436.1" style="--d:0.30s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="1280" y1="618" x2="1262.6" y2="644.9" style="--d:0.40s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="1117" y1="770" x2="1043.2" y2="803.4" style="--d:0.50s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="852.1" y1="844.6" x2="747.9" y2="844.6" style="--d:0.60s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="556.8" y1="803.4" x2="483" y2="770" style="--d:0.70s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="337.4" y1="644.9" x2="320" y2="618" style="--d:0.80s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="285.5" y1="436.1" x2="288.8" y2="420.1" style="--d:0.90s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="386.4" y1="259.1" x2="430.5" y2="223.3" style="--d:1.00s"/>
+          <line class="mesh draw" data-step="2" pathLength="1" x1="606" y1="140.1" x2="682.5" y2="124.3" style="--d:1.10s"/>
+        </g>
+        <!-- centre: B&S LUXURY, then the project takes the seat -->
+        <circle class="center draw" pathLength="1" cx="800" cy="480" r="150" style="--d:.2s"/>
+        <g class="eco__bns"><text class="eco__center r fade" x="800" y="476" text-anchor="middle" style="--d:.5s">B&amp;S LUXURY</text><text class="eco__center-tag r fade" x="800" y="512" text-anchor="middle" style="--d:.7s">MIAMI</text></g>
+        <g><text class="eco__project r fade" data-step="1" x="800" y="478" text-anchor="middle" data-project style="--d:.5s">[PROJECT NAME]</text><text class="eco__project-tag r fade" data-step="1" x="800" y="512" text-anchor="middle" style="--d:.8s">× B&amp;S LUXURY</text></g>
+        <circle class="halo" cx="800" cy="100" r="120"/>
+        <!-- Luxury Ecosystem -->
+        <g class="r" style="--d:1.20s">
+          <circle class="orb orb--core" cx="800" cy="100" r="120"/>
+          <g class="ico ico--core" transform="translate(800 34) scale(1.25)"><path d="M-15 16V-6h12v22M-3 16V-16h18v32M-15 16h33M-10 0h3M-10 6h3M3-10h3M9-10h3M3-3h3M9-3h3M3 4h3M9 4h3"/></g>
+          <text class="eco__core" x="800" y="97" text-anchor="middle">Luxury</text>
+          <text class="eco__core" x="800" y="123" text-anchor="middle">Ecosystem</text>
+          <text class="eco__cap" x="800" y="157" text-anchor="middle">Seven verticals · one client</text>
+        </g>
+        <!-- Private Aviation -->
+        <g class="r" style="--d:1.34s">
+          <circle class="orb" cx="1091.9" cy="160.3" r="100"/>
+          <g class="ico" transform="translate(1091.9 105.3) scale(1.05)"><path d="M0-17c3 0 4 6 4 10v5l13 8v3l-13-4v6l4 3v2l-8-2-8 2v-2l4-3v-6l-13 4v-3l13-8v-5c0-4 1-10 4-10z"/></g>
+          <text x="1091.9" y="156.8" text-anchor="middle">Private</text>
+          <text x="1091.9" y="175.8" text-anchor="middle">Aviation</text>
+        </g>
+        <!-- Yachting -->
+        <g class="r" style="--d:1.48s">
+          <circle class="orb" cx="1291.2" cy="322.1" r="100"/>
+          <g class="ico" transform="translate(1291.2 267.1) scale(1.05)"><path d="M-17 8h34l-5 8H-13zM-1-17v25M-1-17c9 4 13 12 13 19H-1M-4-8c-6 3-9 9-9 13h9"/></g>
+          <text x="1291.2" y="328.1" text-anchor="middle">Yachting</text>
+        </g>
+        <!-- Interior Design -->
+        <g class="r" style="--d:1.62s">
+          <circle class="orb" cx="1334.5" cy="534.1" r="100"/>
+          <g class="ico" transform="translate(1334.5 479.1) scale(1.05)"><path d="M-14-2v-9a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v9M-14-2a4 4 0 0 0-4 4v8h36v-8a4 4 0 0 0-4-4M-10-2h20v8h-20zM-15 10v5M15 10v5"/></g>
+          <text x="1334.5" y="530.6" text-anchor="middle">Interior</text>
+          <text x="1334.5" y="549.6" text-anchor="middle">Design</text>
+        </g>
+        <!-- Luxury & Lifestyle Partners -->
+        <g class="r" style="--d:1.76s">
+          <circle class="orb" cx="1208.1" cy="728.8" r="100"/>
+          <g class="ico" transform="translate(1208.1 673.8) scale(1.05)"><path d="M-16-6l8-10h16l8 10L0 16zM-16-6h32M-8-16l8 32M8-16L0 16M-8-16l-3 10M8-16l3 10"/></g>
+          <text x="1208.1" y="715.8" text-anchor="middle">Luxury &amp;</text>
+          <text x="1208.1" y="734.8" text-anchor="middle">Lifestyle</text>
+          <text x="1208.1" y="753.8" text-anchor="middle">Partners</text>
+        </g>
+        <!-- Events -->
+        <g class="r" style="--d:1.90s">
+          <circle class="orb" cx="952.1" cy="844.6" r="100"/>
+          <g class="ico" transform="translate(952.1 789.6) scale(1.05)"><path d="M-16-11h32v27h-32zM-16-3h32M-10-16v8M10-16v8M-8 5h4M-2 5h4M4 5h4"/></g>
+          <text x="952.1" y="850.6" text-anchor="middle">Events</text>
+        </g>
+        <!-- Broker Community -->
+        <g class="r" style="--d:2.04s">
+          <circle class="orb" cx="647.9" cy="844.6" r="100"/>
+          <g class="ico" transform="translate(647.9 789.6) scale(1.05)"><circle cx="-7" cy="-7" r="5"/><circle cx="8" cy="-9" r="4"/><path d="M-17 13c0-8 4-12 10-12s10 4 10 12M4 9c1-6 4-9 8-9s8 3 8 9"/></g>
+          <text x="647.9" y="841.1" text-anchor="middle">Broker</text>
+          <text x="647.9" y="860.1" text-anchor="middle">Community</text>
+        </g>
+        <!-- Business Development -->
+        <g class="r" style="--d:2.18s">
+          <circle class="orb" cx="391.9" cy="728.8" r="100"/>
+          <g class="ico" transform="translate(391.9 673.8) scale(1.05)"><path d="M-17-6h34v22h-34zM-6-6v-6h12v6M-17 4h34M-3 4v4h6V4"/></g>
+          <text x="391.9" y="725.3" text-anchor="middle">Business</text>
+          <text x="391.9" y="744.3" text-anchor="middle">Development</text>
+        </g>
+        <!-- International Network -->
+        <g class="r" style="--d:2.32s">
+          <circle class="orb" cx="265.5" cy="534.1" r="100"/>
+          <g class="ico" transform="translate(265.5 479.1) scale(1.05)"><circle r="16"/><ellipse rx="7" ry="16"/><path d="M-16 0h32M-14-8h28M-14 8h28"/></g>
+          <text x="265.5" y="530.6" text-anchor="middle">International</text>
+          <text x="265.5" y="549.6" text-anchor="middle">Network</text>
+        </g>
+        <!-- Content & Visibility -->
+        <g class="r" style="--d:2.46s">
+          <circle class="orb" cx="308.8" cy="322.1" r="100"/>
+          <g class="ico" transform="translate(308.8 267.1) scale(1.05)"><path d="M-17-12h34v20h-34zM-6 16h12M0 8v8M-3-6l7 4-7 4z"/></g>
+          <text x="308.8" y="318.6" text-anchor="middle">Content &amp;</text>
+          <text x="308.8" y="337.6" text-anchor="middle">Visibility</text>
+        </g>
+        <!-- Direct Outreach -->
+        <g class="r" style="--d:2.60s">
+          <circle class="orb" cx="508.1" cy="160.3" r="100"/>
+          <g class="ico" transform="translate(508.1 105.3) scale(1.05)"><path d="M-17-10h34v22h-34zM-17-10l17 12 17-12"/></g>
+          <text x="508.1" y="156.8" text-anchor="middle">Direct</text>
+          <text x="508.1" y="175.8" text-anchor="middle">Outreach</text>
+        </g>
+      </svg>
+      <div class="eco__words" aria-hidden="true">
+        <span style="left:5%; top:16%; --w:0s">Access</span>
+        <span style="right:6%; top:14%; --w:3s">Activation</span>
+        <span style="right:4%; top:52%; --w:6s">Demand</span>
+        <span style="left:7%; top:78%; --w:9s">Network</span>
+        <span style="left:3%; top:48%; --w:12s">Relationships</span>
+        <span style="right:6%; top:80%; --w:5s">Visibility</span>
+        <span style="right:4%; top:32%; --w:14s">Opportunities</span>
+      </div>
+    </div>
+    <div class="eco__head">
+      <p class="eyebrow r">03 · Developer partnerships</p>
+      <p class="display display--sm eco__title r" style="--d:.3s">Not just promoted. <span class="accent">Integrated.</span></p>
+    </div>
+    <div class="eco__statement pjeco__st" data-step="2" style="--d:.9s">
+      <p class="display display--sm">One partnership. <span class="accent">Multiple touchpoints.</span></p>
+    </div>
+    <div class="eco__statement pjeco__st" data-step="3" style="--d:.5s">
+      <p class="display display--sm">Online <span class="accent">+</span> offline. &nbsp;Local <span class="accent">+</span> international. &nbsp;Direct <span class="accent">+</span> broker network.</p>
+    </div>
+  </section>
+
+  <!-- ══ 11d · WE MATCH YOUR COMMITMENT ═══════════════════════════════════ -->
+  <section class="slide" data-section="5" data-name="Miami Growth Strategy" data-title="We match your commitment">
+    <div class="match">
+      <div class="match__head">
+        <p class="eyebrow r">03 · Developer partnerships</p>
+        <p class="display display--sm eco__title r" style="--d:.3s">We match <span class="accent">your commitment.</span></p>
+      </div>
+
+      <!-- phase A · the two commitments, side by side -->
+      <div class="match__layer match__ledger">
+        <div class="ledger">
+          <div class="ledger__col">
+            <p class="eyebrow r" style="--d:.6s">Your commitment</p>
+            <div class="count count--md r" style="--d:.8s"><small data-amount="currency">$</small><span data-amount="developer">20K</span></div>
+            <span class="caps r" style="--d:1s">Partnership program</span>
+            <div class="stem ln ln--v" style="--d:1.3s"></div>
+            <div class="ledger__items">
+              <span class="r" style="--d:1.6s">Ecosystem</span>
+              <span class="r" style="--d:1.72s">Events</span>
+              <span class="r" style="--d:1.84s">Business development</span>
+              <span class="r" style="--d:1.96s">Broker activation</span>
+              <span class="r" style="--d:2.08s">International reach</span>
+              <span class="r" style="--d:2.2s">Visibility</span>
+            </div>
+          </div>
+          <div class="ledger__rule ln ln--v" data-step="1" style="--d:0s"></div>
+          <div class="ledger__col">
+            <p class="eyebrow" data-step="1" style="--d:.3s">Our commitment</p>
+            <div class="count count--md" data-step="1" style="--d:.5s"><small data-amount="currency">$</small><span data-amount="bns">20K</span></div>
+            <span class="caps" data-step="1" style="--d:.7s">B&amp;S Luxury capital</span>
+            <div class="stem ln ln--v" data-step="1" style="--d:1s"></div>
+            <div class="ledger__items">
+              <span class="hi" data-step="1" style="--d:1.3s">100% dedicated<br>paid media</span>
+              <div class="stem ln ln--v" data-step="1" style="--d:1.6s"></div>
+              <span data-step="1" style="--d:1.9s">Google Ads</span>
+              <span class="ledger__plus" data-step="1" style="--d:2.05s">+</span>
+              <span data-step="1" style="--d:2.2s">Meta / Retargeting</span>
+              <span class="ledger__note" data-step="1" style="--d:2.4s">where strategically appropriate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- phase B · the two sides come together -->
+      <div class="match__layer match__sum">
+        <div class="sum__in">
+          <p class="eyebrow" data-step="2" style="--d:0s">The partnership model</p>
+          <div class="sum">
+            <div class="sum__cell" data-step="2" style="--d:.3s">
+              <div class="count count--md"><small data-amount="currency">$</small><span data-amount="developer">20K</span></div>
+              <span class="serif-caps">Partnership<br>platform</span>
+            </div>
+            <div class="sum__op" data-step="2" style="--d:.9s">+</div>
+            <div class="sum__cell" data-step="2" style="--d:1.1s">
+              <div class="count count--md"><small data-amount="currency">$</small><span data-amount="bns">20K</span></div>
+              <span class="serif-caps">Dedicated<br>paid media</span>
+              <span class="caps accent">Funded by B&amp;S Luxury</span>
+            </div>
+            <div class="sum__op" data-step="2" style="--d:1.7s">=</div>
+            <div class="sum__cell sum__cell--result" data-step="2" style="--d:1.9s">
+              <span class="serif-caps">One integrated<br>growth program</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- phase C · the core value proposition -->
+      <div class="match__layer match__msg">
+        <div class="match__msg-in">
+          <p class="display display--md" data-step="3" style="--d:.4s">You enter the ecosystem.<br>We match your commitment<br><span class="accent">with real media investment.</span></p>
+          <div class="match__both" data-step="4" style="--d:.2s">
+            <div class="rule rule--accent rule--short"></div>
+            <p class="display display--sm">Your project gets both.</p>
+            <p class="display display--md">The network <span class="accent">+</span> the demand engine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 11e · THE TEMPORARY ADVANCE ══════════════════════════════════════ -->
+  <section class="slide" data-section="5" data-name="Miami Growth Strategy" data-title="The temporary advance">
+    <div class="adv">
+      <!-- phase 0 · the headline -->
+      <div class="adv__layer adv__h">
+        <div>
+          <p class="eyebrow r">03 · Developer partnerships</p>
+          <p class="display display--md r" style="--d:.4s">And your commitment<br>doesn't have to become<br><span class="accent">a permanent cost.</span></p>
+        </div>
+      </div>
+
+      <!-- phase 1 · the loop: the advance goes out, works, and comes back -->
+      <div class="adv__layer adv__loop">
+        <div class="adv__fig">
+          <!-- Eight stations on a 250-radius loop (centre 350,350), starting at
+               the top and running clockwise. The last segment — first
+               commission back to the commitment — closes the circle. -->
+          <svg viewBox="0 0 700 700" aria-hidden="true">
+            <defs>
+              <filter id="advblur" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="7"/></filter>
+            </defs>
+          <circle class="ring" cx="350" cy="350" r="290"/>
+          <circle class="ring ring--far" cx="350" cy="350" r="338"/>
+          <path class="loop loop--main draw" data-step="1" pathLength="1" d="M350 100A250 250 0 1 1 100 350" style="--d:0s"/>
+          <path class="loop loop--return draw" data-step="1" pathLength="1" d="M100 350A250 250 0 0 1 350 100" style="--d:4.2s"/>
+          <!-- Partnership commitment -->
+          <g class="fade" data-step="1" style="--d:0.00s">
+            <circle class="dot" cx="350" cy="100" r="4"/>
+            <text class="amt" x="350" y="40" text-anchor="middle"><tspan class="cur" data-amount="currency">$</tspan><tspan data-amount="developer">20K</tspan></text>
+            <text x="350" y="70" text-anchor="middle">Partnership commitment</text>
+          </g>
+          <!-- B&amp;S Luxury activation -->
+          <g class="fade" data-step="1" style="--d:0.70s">
+            <circle class="dot" cx="526.8" cy="173.2" r="4"/>
+            <text x="545.2" y="158.8" text-anchor="start">B&amp;S Luxury activation</text>
+          </g>
+          <!-- B&amp;S-funded paid media -->
+          <g class="fade" data-step="1" style="--d:1.40s">
+            <circle class="dot" cx="600" cy="350" r="4"/>
+            <text class="amt" x="626" y="339" text-anchor="start"><tspan class="cur" data-amount="currency">$</tspan><tspan data-amount="bns">20K</tspan></text>
+            <text x="626" y="369" text-anchor="start">B&amp;S-funded paid media</text>
+          </g>
+          <!-- Leads -->
+          <g class="fade" data-step="1" style="--d:2.10s">
+            <circle class="dot" cx="526.8" cy="526.8" r="4"/>
+            <text x="545.2" y="549.2" text-anchor="start">Leads</text>
+          </g>
+          <!-- Opportunities -->
+          <g class="fade" data-step="1" style="--d:2.80s">
+            <circle class="dot" cx="350" cy="600" r="4"/>
+            <text x="350" y="644" text-anchor="middle">Opportunities</text>
+          </g>
+          <!-- Closing -->
+          <g class="fade" data-step="1" style="--d:3.50s">
+            <circle class="dot" cx="173.2" cy="526.8" r="4"/>
+            <text x="154.8" y="549.2" text-anchor="end">Closing</text>
+          </g>
+          <!-- First commission -->
+          <g class="fade" data-step="1" style="--d:4.20s">
+            <circle class="dot" cx="100" cy="350" r="4"/>
+            <text x="74" y="354" text-anchor="end">First commission</text>
+          </g>
+          <!-- Agreed advance credited · recovered -->
+          <g class="fade" data-step="1" style="--d:4.90s">
+            <circle class="dot dot--on" cx="173.2" cy="173.2" r="5"/>
+            <circle class="dotpulse" cx="173.2" cy="173.2" r="5"><animate attributeName="r" values="5;26;5" dur="3s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".9;0;0" dur="3s" repeatCount="indefinite"/></circle>
+            <text class="hi" x="154.8" y="148.8" text-anchor="end">Agreed advance</text>
+            <text class="hi" x="154.8" y="168.8" text-anchor="end">credited · recovered</text>
+          </g>
+          <!-- the rider: value circulating once the loop closes -->
+          <g class="fade" data-step="1" style="--d:5.8s"><g><animateMotion dur="16s" repeatCount="indefinite" path="M350 100A250 250 0 1 1 350 600A250 250 0 1 1 350 100"/><circle class="rider-glow" r="12" filter="url(#advblur)"/><circle class="rider" r="4"/></g></g>
+          </svg>
+        </div>
+      </div>
+      <p class="adv__note" data-step="1" style="--d:5.6s">Subject to final written agreement and applicable brokerage / developer terms.</p>
+
+      <!-- phase 2 · the principle -->
+      <div class="adv__layer adv__a">
+        <p class="display display--md" data-step="2" style="--d:.5s">A temporary advance.<br>A real commitment<br><span class="accent">from both sides.</span></p>
+      </div>
+
+      <!-- phase 3 · the strategic close -->
+      <div class="adv__layer adv__b">
+        <div class="adv__lines">
+          <p class="display display--sm" data-step="3" style="--d:.4s">You commit<br>to the partnership.</p>
+          <p class="display display--sm" data-step="3" style="--d:.9s">We commit<br>to building the demand.</p>
+          <p class="display display--sm" data-step="3" style="--d:1.5s">We win<br><span class="accent">when you win.</span></p>
+        </div>
+      </div>
+
+      <!-- phase 4 · the reveal -->
+      <div class="adv__layer adv__final">
+        <div class="meet__in">
+          <img class="logo logo--mid" data-step="4" data-logo="logoBns" alt="B&amp;S LUXURY — MIAMI" style="--d:.4s">
+          <div class="meet__x" data-step="4" style="--d:1s">×</div>
+          <div class="meet__bhs" data-step="4" data-project style="--d:1.4s">[PROJECT NAME]</div>
+          <div class="cover__rule ln ln--v" data-step="4" style="--d:2.2s"></div>
+          <p class="display display--sm" data-step="4" style="--d:2.8s">Beyond representation.<br><span class="accent">Partnership.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ 12 · TALENT ══════════════════════════════════════════════════════ -->
   <section class="slide slide--light" data-section="5" data-name="Miami Growth Strategy" data-title="Top-tier talent">
     <div class="slide__inner">
@@ -1591,6 +2040,7 @@ const ASSETS = {
   miami:           'assets/photos/miami.webp',
   fisherIsland:    'assets/photos/fisher-island.webp',
   brickell:        'assets/photos/brickell.webp',
+  southOfFifth:    'assets/photos/south-of-fifth.webp',
 
   logoBizStyle:     'assets/logos/bizandstyle-white.png',
   logoBizStyleDark: 'assets/logos/bizandstyle-black.png',
@@ -1598,6 +2048,19 @@ const ASSETS = {
   logoBns:          'assets/logos/bns-luxury-miami-white.png',
   logoBnsDark:      'assets/logos/bns-luxury-miami-black.png',
 
+};
+
+/* ────────────────────────────────────────────────────────────────────────────
+   PARTNERSHIP — the developer-partnership example on the four "03 · Developer
+   partnerships" slides. The figures are illustrative: edit them here, or
+   override per meeting from the URL —
+   index.html?project=The%20Residences&developer=25K&bns=25K
+   ──────────────────────────────────────────────────────────────────────────── */
+const PARTNERSHIP = {
+  project:   '[PROJECT NAME]',   // the development
+  currency:  '$',
+  developer: '20K',              // the developer's partnership commitment
+  bns:       '20K',              // B&S Luxury's matching investment, dedicated to paid media
 };
 
 const SECTIONS = [
@@ -1635,6 +2098,12 @@ const SECTIONS = [
   document.querySelectorAll('[data-photo]').forEach(el => { el.style.backgroundImage = `url("${ASSETS[el.dataset.photo]}")`; });
   document.querySelectorAll('[data-logo]').forEach(el => { el.src = ASSETS[el.dataset.logo]; });
   document.querySelectorAll('video[data-video]').forEach(v => { v.src = ASSETS[v.dataset.video]; if (v.dataset.poster) v.poster = ASSETS[v.dataset.poster]; });
+
+  /* ── partnership figures (config, or ?project= ?developer= ?bns= ?currency=) ── */
+  const qp = new URLSearchParams(location.search);
+  ['project', 'currency', 'developer', 'bns'].forEach(k => { if (qp.get(k)) PARTNERSHIP[k] = qp.get(k); });
+  document.querySelectorAll('[data-project]').forEach(el => { el.textContent = PARTNERSHIP.project; });
+  document.querySelectorAll('[data-amount]').forEach(el => { el.textContent = PARTNERSHIP[el.dataset.amount]; });
 
   /* ── per-slide step bookkeeping & automatic stagger ─────────────────────── */
   const phoneStagger = window.matchMedia('(max-width: 600px)').matches ? 0.5 : 1;
