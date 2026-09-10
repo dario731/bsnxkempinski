@@ -81,7 +81,7 @@ there and the deck follows; nothing else references files.
 | Key | Used on | File now |
 | --- | --- | --- |
 | `coverVideo` / `coverPoster` | cover | `assets/photos/miami-hero.mp4` / `.jpg` |
-| `southOfFifth` | "120+ new developments" | `assets/photos/south-of-fifth.webp` |
+| `southOfFifth` | "170+ new developments" | `assets/photos/south-of-fifth.webp` |
 | `logoBns` / `logoBnsDark` | chrome, cover | `assets/logos/bns-luxury-miami-*.png` |
 | `logoBizStyle` / `logoBizStyleDark` | chrome, organisation chart | `assets/logos/bizandstyle-*.png` |
 | `logoRealDeal` | The Real Deal | `assets/logos/the-real-deal.png` |
@@ -100,6 +100,6 @@ opens a specific step.
 
 ## Deploying
 
-The repository deploys to Netlify straight from GitHub  (see : no build step,
-the root is the site). Push to  and Netlify publishes; the  branch is for work in
-progress. The Kempinski source folder is git-ignored; the deck reads its copies in .
+The repository deploys to Netlify straight from GitHub `main` (see `netlify.toml`: no build step,
+the root is the site). Push to `main` and Netlify publishes; the `preview` branch is for work in
+progress. The Kempinski source folder is git-ignored; the deck reads its copies in `assets/`.
