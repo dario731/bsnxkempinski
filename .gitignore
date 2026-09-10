@@ -2,3 +2,5 @@
 .claude/
 # the developer's source folder (renderings, logo, facts PDF); the deck uses the copies in assets/
 Kempinski Residences Miami Design District/
+# exported copies of the deck
+*.pdf
