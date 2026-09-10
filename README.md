@@ -25,7 +25,7 @@ Press **F** for full screen before you start.
 
 Pacing: every reveal delay is scaled by `SPEED` at the top of the deck's step bookkeeping (`0.6` now; `1` is the original, slower timing).
 
-The deck has 14 screens in six chapters. Left and right arrows sit at the edges on every screen size (they fade in on hover on a desktop). Most slides have several **steps**: pressing →
+The deck has 14 screens in six chapters. Left and right arrows sit at the edges on every screen size (bottom corners on a phone); they move one whole slide, fully revealed, while the keys step through the reveals. Most slides have several **steps**: pressing →
 reveals the next idea on the same slide before moving on, so you can pace each point
 verbally. Going back lands on the previous slide fully revealed. `#7` in the URL opens
 slide 7 directly. The deck holds indefinitely on any slide: ambient motion loops, nothing
@@ -35,7 +35,7 @@ auto-advances (on a phone, steps play by themselves).
 
 | # | Chapter | Screens |
 | --- | --- | --- |
-| 01 | Who we are | Biz & Style · The ecosystem · Our objective · On the map (where we are investing: The Real Deal, building the team, digital lead technology) · Growing progressively, selecting the top (the agent ring) |
+| 01 | Who we are | Biz & Style · The ecosystem · Our objective · On the map (The Real Deal, a statement of intent; investing ahead of the business in the team and in the digital infrastructure) · Growing progressively, selecting the top (the agent ring) |
 | 02 | The market | One screen: 170+ new developments, then five lines — we don't want them all · we select what we believe in · selected, not added · a limited number of projects, a deeper commitment · when we believe, we go all in |
 | 03 | The engines | Two engines · Digital lead generation (the tech and the people, both in-house) · International reach (the Biz & Style world map: dotted coastlines, routes from Miami to Los Angeles, Toronto, New York, Mexico City, Santo Domingo, Panama, Bogotá, Lima, São Paulo, London, Paris, Milan, Madrid, Dubai, Singapore) · One integrated ecosystem (luxury ecosystem, lead generation, broker community, international reach around the project) |
 | 04 | The partnership | Already committed (the project's own rendering: website built, campaigns running) · Skin in the game (for every $100 you commit, we put $100 of our own into pure media; the goal is sales; at the first commission your $100 comes back; then what the commitment unlocks: the ecosystem, a sales team, international exposure, lead generation and its management) |
@@ -55,7 +55,7 @@ the top of the `<script>` in `index.html`:
 | --- | --- |
 | `name`, `shortName` | cover, the integrated ecosystem, "Integrated", "Already committed", next step. `shortName` (≤ 16 characters) is used inside the circles |
 | `developer`, `location` | cover, "Already committed" |
-| `logo` | the project mark on "Next step" (a black-on-white file is fine; it is inverted on the dark slide) |
+| `logo` | the project mark on "Next step" (a dark mark on a transparent SVG or PNG; it is inverted to white) |
 | `currency`, `partnership`, `match` | the two amounts on "Skin in the game" (default `100` and `100`, an illustrative unit; the counters animate to whatever you set) |
 | `event` | optional invitation line on "Next step" |
 | `images`, `priceRange`, `valueProposition`, `whySelected`, `commissionPct`, `exampleUnitPrice`, `contact` | reserved for optional screens not in the current sequence |
@@ -103,3 +103,5 @@ opens a specific step.
 The repository deploys to Netlify straight from GitHub `main` (see `netlify.toml`: no build step,
 the root is the site). Push to `main` and Netlify publishes; the `preview` branch is for work in
 progress. The Kempinski source folder is git-ignored; the deck reads its copies in `assets/`.
+
+Share previews: the `<title>` and the Open Graph tags in the `<head>` name the deck "B&S Luxury × Kempinski Residences" and point WhatsApp / iMessage at `assets/photos/share.jpg` (1200×630). The `og:image` URL is absolute and currently assumes `https://bsnxkempinski.netlify.app`; change it to the final domain once Netlify assigns one.

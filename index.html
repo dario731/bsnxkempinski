@@ -6,8 +6,20 @@
 <meta name="theme-color" content="#0B0A09">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>B&amp;S LUXURY × Selected Developers</title>
+<title>B&amp;S Luxury × Kempinski Residences</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="A strategic conversation. Selected developments. Shared commitment.">
+<!-- Share preview (WhatsApp, iMessage, LinkedIn). og:image must be an absolute URL:
+     update the domain once the Netlify site name is known. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="B&amp;S Luxury × Kempinski Residences">
+<meta property="og:description" content="A strategic conversation. Selected developments. Shared commitment.">
+<meta property="og:image" content="https://bsnxkempinski.netlify.app/assets/photos/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="B&amp;S Luxury × Kempinski Residences">
+<meta name="twitter:image" content="https://bsnxkempinski.netlify.app/assets/photos/share.jpg">
 <style>
 /* ────────────────────────────────────────────────────────────────────────────
    B&S LUXURY × SELECTED DEVELOPERS — the developer experience
@@ -463,7 +475,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .onmap__tl { height: clamp(14px, 1.8vh, 22px); width: auto; filter: grayscale(1) brightness(.2); opacity: .85; margin: 2px 0; }
 .onmap__c { font-family: var(--sans); font-size: clamp(10px, .78vw, 12.5px); letter-spacing: .22em; text-transform: uppercase; color: var(--fg-mute); line-height: 1.6; }
 .onmap__c b { font-weight: 500; color: var(--fg); }
-.map--world svg { top: 6vh; height: 88vh; }
+.map--world svg { top: 15vh; height: 64vh; }
 .map--world .land { fill: rgba(250,246,239,.26); }
 .map--world text { font-family: var(--sans); font-weight: 500; font-size: 14px; letter-spacing: .3em; fill: var(--fg-mute); }
 .map--world text.base { font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: .34em; fill: var(--ivory); }
@@ -1030,7 +1042,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 
 /* ── Integrated ecosystem (four inputs) · the mechanic · project mark ──────── */
 .sys__fig--four { width: min(104vh, 64vw); top: 54%; }
-.sys__fig--four text.pj { font-size: 32px; }
+.sys__fig--four text.pj { font-size: 26px; letter-spacing: .14em; }
 .sys__fig--four text { font-size: 22px; letter-spacing: .26em; }
 .sys__fig--four text.tag { font-size: 13px; }
 .mech .stage__t { font-size: clamp(16px, 1.5vw, 26px); letter-spacing: .1em; }
@@ -1039,8 +1051,8 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .pipe .stage__items span.hi b { font-weight: 400; }
 .pipe .stage__items span.hi b[data-amount="currency"] { color: var(--accent); font-size: .7em; vertical-align: .3em; }
 .mech__note { margin: clamp(22px, 3.6vh, 40px) 0 0; font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--fg-soft); }
-.pj-logo { height: clamp(70px, 12vh, 140px); width: auto; filter: grayscale(1) contrast(1.4) invert(1); mix-blend-mode: screen; margin-bottom: clamp(8px, 1.4vh, 16px); }
-@media (max-width: 600px) { .sys__fig--four { width: 94vw; } .sys__fig--four text.pj { font-size: 34px; } .pj-logo { height: 64px; } }
+.pj-logo { height: clamp(70px, 12vh, 140px); width: auto; filter: invert(1); margin-bottom: clamp(8px, 1.4vh, 16px); }
+@media (max-width: 600px) { .sys__fig--four { width: 94vw; } .sys__fig--four text.pj { font-size: 28px; letter-spacing: .12em; } .pj-logo { height: 64px; } }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {
@@ -1321,6 +1333,62 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
 .skin__rail, .skin .sum__cell .caps { transition: opacity .8s var(--ease); }
 @media (max-width: 900px) { .skin__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 900px) { .skin__lab { white-space: normal; text-align: center; width: 90vw; } }
+
+/* ── Phone · arrows low, skin in the game as a column, last slide ─────────── */
+.next__x { margin: clamp(6px, 1.4vh, 16px) 0; font-size: clamp(36px, 4.6vw, 84px); }
+@media (max-width: 600px) {
+  .chrome__arrow { top: auto; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); margin-top: 0; }
+  .match { position: relative; inset: auto; min-height: 100%; }
+  .match__head { position: relative; left: auto; right: auto; top: auto; padding: 84px 20px 0; }
+  .match__layer { position: relative; inset: auto; padding: 22px 20px 120px; display: block; }
+  .skin { grid-template-columns: 1fr; gap: 18px; }
+  .skin .sum__op { display: none; }
+  .skin .sum__cell .count--md { font-size: 44px; }
+  .skin .sum__cell .serif-caps { font-size: 15px; }
+  .skin__rail { margin-top: 22px; }
+  .skin__rail svg { height: 34px; }
+  .skin__lab { position: static; transform: none; display: block; white-space: normal; margin: 8px 0 0; }
+  .skin__lab--a, .skin__lab--b { margin-top: 8px; margin-bottom: 0; }
+  .skin__grid { grid-template-columns: 1fr; }
+  .skin__gets { margin-top: 22px; }
+  .skin__close { margin-top: 18px; }
+  .math__note { position: static; margin: 20px 0 0; padding: 0; }
+  .pj-logo { height: 58px; }
+  .next__x { font-size: 32px; margin: 8px 0; }
+}
+
+/* ── Objective row · on the map investments · phone ecosystem labels ──────── */
+.obj__row { display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 60px); margin-top: clamp(64px, 13vh, 150px); }
+.obj__row span { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 38px); letter-spacing: .14em; text-transform: uppercase; }
+.obj__row i { font-style: normal; font-family: var(--sans); font-size: 9.5px; letter-spacing: .3em; color: var(--accent); margin-right: 14px; vertical-align: .7em; }
+.onmap__logo img { filter: none; }
+.onmap__invest { margin-top: clamp(28px, 4.6vh, 52px); padding-top: clamp(18px, 3vh, 32px); border-top: 1px solid var(--line); display: grid; gap: clamp(12px, 2vh, 20px); }
+.onmap__invest .eyebrow { margin-bottom: 0; }
+.onmap__inv { display: grid; gap: 5px; }
+.onmap__inv .onmap__t { font-size: clamp(18px, 1.8vw, 30px); }
+@media (max-width: 600px) {
+  .obj__row { gap: 12px 18px; margin-top: 28px; }
+  .obj__row span { font-size: 16px; }
+  .sys__fig--four text { font-size: 20px; letter-spacing: .2em; }
+  .sys__fig--four text.tag { font-size: 12px; }
+  .sys__fig--four .lab-l, .sys__fig--four .lab-r { text-anchor: middle; }
+  .sys__fig--four text.lab-l { transform: translate(25px, -40px); }
+  .sys__fig--four text.lab-r { transform: translate(-25px, -40px); }
+  .match__layer { padding-bottom: 150px; }
+}
+
+/* ── Menu button: a 44px hit area, three lines centred ────────────────────── */
+.chrome__idx { width: 44px; height: 44px; margin: -14px -12px -14px 0; opacity: .6;
+  background:
+    linear-gradient(currentColor, currentColor) center 15px / 22px 1px no-repeat,
+    linear-gradient(currentColor, currentColor) center 22px / 22px 1px no-repeat,
+    linear-gradient(currentColor, currentColor) center 29px / 22px 1px no-repeat; }
+.chrome__idx span { top: 100%; margin-top: 2px; }
+@media (max-width: 600px) { .chrome__idx { width: 48px; height: 48px; margin: -16px -14px -16px 0; opacity: .75;
+    background:
+      linear-gradient(currentColor, currentColor) center 16px / 24px 1.5px no-repeat,
+      linear-gradient(currentColor, currentColor) center 24px / 24px 1.5px no-repeat,
+      linear-gradient(currentColor, currentColor) center 32px / 24px 1.5px no-repeat; } }
 </style>
 </head>
 <body>
@@ -1368,14 +1436,7 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
         </div>
       </div>
     </div>
-    <div class="org__focus">
-      <div>
-        <p class="eyebrow">The luxury division</p>
-        <img class="logo logo--hero" data-logo="logoBns" alt="B&amp;S LUXURY — MIAMI" style="margin: 0 auto">
-        <p class="lede">Not an isolated real-estate team. A division of a business-development group.</p>
-      </div>
-    </div>
-    <i data-step="1" hidden></i><i data-step="2" hidden></i>
+    <i data-step="1" hidden></i>
   </section>
 
 
@@ -1531,31 +1592,44 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
   <section class="slide" data-section="1" data-name="Who We Are" data-title="Our objective">
     <div class="slide__inner">
       <p class="eyebrow r">Our objective</p>
-      <h2 class="display display--lg r">Position B&amp;S Luxury<br>as a recognized force<br>in Miami<br><span class="accent">luxury real estate.</span></h2>
-      <div class="quad">
-        <div class="quad__item" data-step="1" style="--d:0s"><div class="quad__n">01</div><div class="quad__t">Brand<br>Equity</div></div>
-        <div class="quad__item" data-step="1" style="--d:.15s"><div class="quad__n">02</div><div class="quad__t">Visibility</div></div>
-        <div class="quad__item" data-step="1" style="--d:.3s"><div class="quad__n">03</div><div class="quad__t">Relationships</div></div>
-        <div class="quad__item" data-step="1" style="--d:.45s"><div class="quad__n">04</div><div class="quad__t">Deal<br>Flow</div></div>
+      <h2 class="display display--md r">Position B&amp;S Luxury <br>as a recognized force <br>in Miami <span class="accent">luxury real estate.</span></h2>
+      <div class="obj__row">
+        <span data-step="1" style="--d:0s"><i>01</i>Brand equity</span>
+        <span data-step="1" style="--d:.15s"><i>02</i>Visibility</span>
+        <span data-step="1" style="--d:.3s"><i>03</i>Relationships</span>
+        <span data-step="1" style="--d:.45s"><i>04</i>Deal flow</span>
       </div>
     </div>
   </section>
 
-  <!-- ══ ON THE MAP · WHERE WE ARE INVESTING ═══════════════════════════════ -->
+  <!-- ══ ON THE MAP · A STATEMENT OF INTENT ═══════════════════════════════ -->
   <section class="slide slide--light" data-section="1" data-name="Who We Are" data-title="On the map">
     <div class="slide__inner">
-      <div class="brings">
+      <div class="onmap">
         <div>
           <p class="eyebrow r">Market positioning</p>
           <h2 class="display display--md r">We want to be <br><span class="accent">on the map.</span></h2>
-          <p class="lede r" style="--d:.4s; margin-top: clamp(18px, 3vh, 32px)">Investing ahead of the business — in visibility, in people and in technology.</p>
+          <div class="onmap__why">
+            <span class="r" style="--d:.5s">Present where the market looks.</span>
+            <span class="r" style="--d:.65s">Seen by developers, brokerages and capital.</span>
+            <span class="r hi" style="--d:.8s">A statement of intent, not a campaign.</span>
+          </div>
+          <div class="onmap__invest" data-step="1" style="--d:0s">
+            <p class="eyebrow">Investing ahead of the business</p>
+            <div class="onmap__inv" data-step="1" style="--d:.2s"><span class="onmap__t">The team</span><span class="onmap__c">In-house · progressively · the top · equipped with the technology</span></div>
+            <div class="onmap__inv" data-step="1" style="--d:.4s"><span class="onmap__t">Digital infrastructure</span><span class="onmap__c">In-house · Google Ads · Meta · websites · CRM · tracking</span></div>
+          </div>
         </div>
-        <div>
-          <p class="eyebrow r" style="--d:.5s">Where we are investing</p>
-          <div class="brings__list">
-            <div class="display display--sm onmap__row r" style="--d:.6s"><i>01</i><span><span class="onmap__t">The Real Deal</span><img class="onmap__tl" data-logo="logoRealDeal" alt="The Real Deal"><span class="onmap__c">Miami Forum · exhibitor 2025 &amp; 2026 · <b data-count="250" data-prefix="$" data-suffix="K">$0K</b> over twelve months</span></span></div>
-            <div class="display display--sm onmap__row r" style="--d:.8s"><i>02</i><span><span class="onmap__t">Building the team</span><span class="onmap__c">In-house · progressively · the top</span></span></div>
-            <div class="display display--sm onmap__row r" style="--d:1s"><i>03</i><span><span class="onmap__t">Digital lead technology</span><span class="onmap__c">In-house · Google Ads · Meta · websites · CRM</span></span></div>
+        <div class="onmap__logo">
+          <img class="r scale" style="--d:.5s" data-logo="logoRealDeal" alt="The Real Deal">
+          <div class="onmap__event r" style="--d:.8s">
+            <span class="serif-caps">Miami Forum</span>
+            <span class="caps">2025 &amp; 2026 editions · Exhibitor</span>
+            <span class="caps" style="margin-top:6px; color: var(--accent)">Where the industry meets</span>
+          </div>
+          <div class="onmap__commit r" style="--d:1.1s">
+            <div class="count count--md"><small>$</small><span data-count="250" data-suffix="K">0K</span></div>
+            <p class="caps count__cap">Committed over twelve months <br>to exhibit at the 2025 and 2026 editions</p>
           </div>
         </div>
       </div>
@@ -1952,11 +2026,11 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
           <path class="wire draw" data-step="1" pathLength="1" d="M600 70 L600.0 232.0" style="--d:.2s"/>
           <g class="fade" data-step="1" style="--d:.1s"><circle class="dot dot--end" cx="600" cy="70" r="5"/><text x="600" y="52" text-anchor="middle">Luxury ecosystem</text><text class="tag" x="600" y="82" text-anchor="middle">Offline acquisition</text></g>
           <path class="wire draw" data-step="3" pathLength="1" d="M1060 350 L718.0 350.0" style="--d:.2s"/>
-          <g class="fade" data-step="3" style="--d:.1s"><circle class="dot dot--end" cx="1060" cy="350" r="5"/><text x="1085" y="345" text-anchor="start">Broker community</text><text class="tag" x="1085" y="371" text-anchor="start">The broker network</text></g>
+          <g class="fade" data-step="3" style="--d:.1s"><circle class="dot dot--end" cx="1060" cy="350" r="5"/><text class="lab-r" x="1085" y="345" text-anchor="start">Broker community</text><text class="tag lab-r" x="1085" y="371" text-anchor="start">The broker network</text></g>
           <path class="wire draw" data-step="2" pathLength="1" d="M600 630 L600.0 468.0" style="--d:.2s"/>
           <g class="fade" data-step="2" style="--d:.1s"><circle class="dot dot--end" cx="600" cy="630" r="5"/><text x="600" y="668" text-anchor="middle">Digital lead generation</text><text class="tag" x="600" y="694" text-anchor="middle">Online acquisition</text></g>
           <path class="wire draw" data-step="4" pathLength="1" d="M140 350 L482.0 350.0" style="--d:.2s"/>
-          <g class="fade" data-step="4" style="--d:.1s"><circle class="dot dot--end" cx="140" cy="350" r="5"/><text x="115" y="345" text-anchor="end">International reach</text><text class="tag" x="115" y="371" text-anchor="end">Relationships & partners</text></g>
+          <g class="fade" data-step="4" style="--d:.1s"><circle class="dot dot--end" cx="140" cy="350" r="5"/><text class="lab-l" x="115" y="345" text-anchor="end">International reach</text><text class="tag lab-l" x="115" y="371" text-anchor="end">Relationships & partners</text></g>
 
         </svg>
       </div>
@@ -2053,11 +2127,12 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
     </div>
     <div class="layer">
       <div class="meet__in">
-        <p class="eyebrow" data-step="1" style="--d:.4s">Next step</p>
-        <img class="pj-logo" data-step="1" data-project-logo alt="" style="--d:.8s" hidden>
+        <img class="logo logo--mid" data-step="1" data-logo="logoBns" alt="B&amp;S LUXURY — MIAMI" style="--d:.3s">
+        <div class="meet__x next__x" data-step="1" style="--d:.7s">×</div>
+        <img class="pj-logo" data-step="1" data-project-logo alt="" style="--d:1s" hidden>
         <div class="meet__bhs" data-step="1" data-project style="--d:.8s">[PROJECT NAME]</div>
         <div class="cover__rule ln ln--v" data-step="1" style="--d:1.6s"></div>
-        <p class="display display--md" data-step="1" style="--d:1.4s">Let's explore <br><span class="accent">if we can accelerate.</span></p>
+        <p class="display display--md" data-step="1" style="--d:1.8s">Let's explore <br><span class="accent">if we can accelerate.</span></p>
         <p class="caps next__event" data-step="1" data-event style="--d:3s" hidden></p>
       </div>
     </div>
@@ -2132,7 +2207,7 @@ const PROJECT = {
   shortName:   'Kempinski',             // short form for circles (≤ 16 chars); falls back to name
   developer:   'DaGrosa Capital Development Partners', // the developer / sponsor
   location:    'Miami Design District',
-  logo:        'assets/logos/kempinski-residences.png', // optional: the project mark (black on white is fine, it is inverted on dark slides)
+  logo:        'assets/logos/kempinski-residences.svg', // optional: the project mark (a dark mark on transparent; it is inverted to white on the dark slide)
   images:      ['assets/photos/kempinski-towers.jpg', 'assets/photos/kempinski-dusk.jpg', 'assets/photos/kempinski-aerial.jpg'], // project renderings
   video:       '',                      // optional: reserved for a project film on the cover
   priceRange:  '',                      // optional, e.g. 'From $2.5M'
@@ -2418,8 +2493,9 @@ const SECTIONS = ['Opening', 'Who We Are', 'The Market', 'The Engines', 'The Par
     else document.exitFullscreen?.();
   }
   document.getElementById('fs').addEventListener('click', e => { e.stopPropagation(); toggleFullscreen(); });
-  document.getElementById('prevBtn').addEventListener('click', e => { e.stopPropagation(); prev(); });
-  document.getElementById('nextBtn').addEventListener('click', e => { e.stopPropagation(); next(); });
+  // the edge arrows move one whole slide and land on it fully revealed
+  document.getElementById('prevBtn').addEventListener('click', e => { e.stopPropagation(); go(index - 1, -1, true); });
+  document.getElementById('nextBtn').addEventListener('click', e => { e.stopPropagation(); go(index + 1, 1, true); });
 
   // hide the cursor while idle on screen
   let cursorT;
