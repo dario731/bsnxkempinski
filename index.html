@@ -331,6 +331,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .org__logo { width: clamp(260px, 30vw, 460px); }
 .org__logo img { width: 100%; }
 .org__sub { margin: clamp(18px, 3vh, 30px) 0 0; }
+.org__lede { text-align: center; max-width: 52ch; margin: clamp(12px, 2vh, 22px) auto 0; font-size: clamp(13px, 1vw, 17px); }
 .org__stem { width: 1px; height: clamp(44px, 9vh, 96px); background: var(--line); margin-top: clamp(28px, 5vh, 56px); }
 .org__bar { width: calc(100% / 3 * 2); height: 1px; background: var(--line); }
 .org__nodes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
@@ -1133,6 +1134,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
   .org__in { width: 92vw; }
   .org__logo { width: 62vw; }
   .org__stem, .org__drop { height: 34px; }
+  .org__lede { font-size: 12px; max-width: 34ch; }
   .org__label { font-size: 12px; letter-spacing: .16em; margin-right: -.16em; }
   .org__labelwrap { padding: 14px 6px; }
   .org__cap { display: none; }
@@ -1572,6 +1574,7 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       <div class="org__in">
         <div class="org__logo r scale"><img data-logo="logoBizStyle" alt="BIZ &amp; STYLE"></div>
         <p class="eyebrow org__sub r">Business Development Platform</p>
+        <p class="lede org__lede r" style="--d:.5s">A Miami-based business development platform built around the luxury ecosystem, designed to compound growth and scale globally.</p>
         <div class="org__stem ln ln--v"></div>
         <div class="org__bar ln ln--c"></div>
         <div class="org__nodes">
