@@ -35,7 +35,7 @@ auto-advances (on a phone, steps play by themselves).
 
 | # | Chapter | Screens |
 | --- | --- | --- |
-| 00 | Opening | Cover with the project mark · Today (the agenda: six lines) |
+| 00 | Opening | Cover with the project mark · Today (the agenda: five lines) |
 | 01 | Who we are | Biz & Style · The ecosystem · Our objective · On the map (The Real Deal, a statement of intent; investing ahead of the business in the team and in the digital infrastructure) · Growing progressively, selecting the top (the agent ring) |
 | 02 | The market · the gap | One screen: 170+ new developments and 60,000+ realtors in Miami alone, then: everyone promotes everything · the influencer approach · we don't follow it · we select what we believe in · a limited number of projects, a deeper commitment · when we believe, we go all in |
 | 03 | The engines | Two engines · Digital lead generation (01 the tech, built in-house · 02 the people, converted in-house, with the developers named: PMG, Terra, Continuum) · International reach (the Biz & Style world map: dotted coastlines, routes from Miami to Los Angeles, Toronto, New York, Mexico City, Santo Domingo, Panama, Bogotá, Lima, São Paulo, London, Paris, Milan, Madrid, Dubai, Singapore) · One integrated ecosystem (luxury ecosystem, lead generation, broker community, international reach around the project) |
