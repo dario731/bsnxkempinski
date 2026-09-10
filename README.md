@@ -25,7 +25,7 @@ Press **F** for full screen before you start.
 
 Pacing: every reveal delay is scaled by `SPEED` at the top of the deck's step bookkeeping (`0.6` now; `1` is the original, slower timing).
 
-The deck has 14 screens in six chapters. Left and right arrows sit at the edges on every screen size (bottom corners on a phone); they move one whole slide, fully revealed, while the keys step through the reveals. Most slides have several **steps**: pressing →
+The deck has 15 screens in six chapters. Left and right arrows sit at the edges on every screen size (bottom corners on a phone); they move one whole slide, fully revealed, while the keys step through the reveals. Most slides have several **steps**: pressing →
 reveals the next idea on the same slide before moving on, so you can pace each point
 verbally. Going back lands on the previous slide fully revealed. `#7` in the URL opens
 slide 7 directly. The deck holds indefinitely on any slide: ambient motion loops, nothing
@@ -35,10 +35,11 @@ auto-advances (on a phone, steps play by themselves).
 
 | # | Chapter | Screens |
 | --- | --- | --- |
+| 00 | Opening | Cover with the project mark · Today (the agenda: six lines) |
 | 01 | Who we are | Biz & Style · The ecosystem · Our objective · On the map (The Real Deal, a statement of intent; investing ahead of the business in the team and in the digital infrastructure) · Growing progressively, selecting the top (the agent ring) |
-| 02 | The market | One screen: 170+ new developments, then five lines — we don't want them all · we select what we believe in · selected, not added · a limited number of projects, a deeper commitment · when we believe, we go all in |
+| 02 | The market · the gap | One screen: 170+ new developments and 60,000+ realtors in Miami alone, then: everyone promotes everything · the influencer approach · we don't follow it · we select what we believe in · a limited number of projects, a deeper commitment · when we believe, we go all in |
 | 03 | The engines | Two engines · Digital lead generation (the tech and the people, both in-house) · International reach (the Biz & Style world map: dotted coastlines, routes from Miami to Los Angeles, Toronto, New York, Mexico City, Santo Domingo, Panama, Bogotá, Lima, São Paulo, London, Paris, Milan, Madrid, Dubai, Singapore) · One integrated ecosystem (luxury ecosystem, lead generation, broker community, international reach around the project) |
-| 04 | The partnership | Already committed (the project's own rendering: website built, campaigns running) · Skin in the game (for every $100 you commit, we put $100 of our own into pure media; the goal is sales; at the first commission your $100 comes back; then what the commitment unlocks: the ecosystem, a sales team, international exposure, lead generation and its management) |
+| 04 | The partnership | Already committed (the project's own rendering: website built, campaigns running) · Skin in the game — a flow: You $100 opens the partnership (the ecosystem, a sales team, international exposure, lead generation and its management); Us $100 goes to pure media (Google Ads, Meta, to the platforms not to us); both meet in the development and end in sales; a gold return path brings your $100 back at the first commission. Phones show the same five stations as a list |
 | 05 | Next step | "We already committed. Let's explore if we can accelerate." on the project's rendering with its mark |
 
 The money appears only in chapter 05, after the value has been established. The two

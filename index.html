@@ -569,11 +569,16 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .select__lines { display: grid; gap: clamp(16px, 2.8vh, 34px); justify-items: end; text-align: right; }
 .select__lines .display--sm { line-height: 1.08; }
 .select__lines .display--md { line-height: 1.02; }
-.slide.s2 .select__lines [data-step="1"], .slide.s3 .select__lines [data-step="2"], .slide.s4 .select__lines [data-step="3"], .slide.s5 .select__lines [data-step="4"] { opacity: .55; }
-.slide.s3 .select__lines [data-step="1"], .slide.s4 .select__lines [data-step="2"], .slide.s5 .select__lines [data-step="3"] { opacity: .4; }
-.slide.s4 .select__lines [data-step="1"], .slide.s5 .select__lines [data-step="2"] { opacity: .3; }
-.slide.s5 .select__lines [data-step="1"] { opacity: .22; }
-.slide.s5 .select__count { opacity: .4; }
+.slide.s2 .select__lines [data-step="1"] { opacity: .5; }
+.slide.s3 .select__lines [data-step="2"] { opacity: .5; }
+.slide.s4 .select__lines [data-step="3"] { opacity: .5; }
+.slide.s5 .select__lines [data-step="4"] { opacity: .5; }
+.slide.s6 .select__lines [data-step="5"] { opacity: .5; }
+.slide.s3 .select__lines [data-step="1"] { opacity: .3; }
+.slide.s4 .select__lines [data-step="2"] { opacity: .3; }
+.slide.s5 .select__lines [data-step="3"] { opacity: .3; }
+.slide.s6 .select__lines [data-step="4"] { opacity: .3; }
+.slide.s6 .select__count { opacity: .45; }
 
 /* ── 11c · Enter the ecosystem ────────────────────────────────────────────── */
 .pjeco text { font-size: 13px; }
@@ -762,11 +767,11 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .field svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .field .fld { fill: var(--ivory); opacity: .55; transition: opacity 1.8s var(--ease) var(--d, 0s), r 1.2s var(--ease); }
 .field .fld--keep { fill: var(--champagne); }
-.slide.s1 .field .fld:not(.fld--keep) { opacity: .06; }
-.slide.s2 .field .fld--keep:not(.fld--one) { opacity: .1; }
-.slide.s2 .field .fld--one { opacity: 1; }
+.slide.s4 .field .fld:not(.fld--keep) { opacity: .06; }
+.slide.s6 .field .fld--keep:not(.fld--one) { opacity: .1; }
+.slide.s6 .field .fld--one { opacity: 1; }
 .field .fld-halo { fill: none; stroke: var(--champagne); stroke-width: 1; opacity: 0; transform-origin: var(--ox) var(--oy); transition: opacity 1.2s var(--ease); }
-.slide.s2 .field .fld-halo { opacity: .6; animation: pulse 4s ease-in-out infinite; }
+.slide.s6 .field .fld-halo { opacity: .6; animation: pulse 4s ease-in-out infinite; }
 .select__lines [data-step="1"].select__first { color: var(--fg); }
 .slide.s2 .select__lines [data-step="1"] { opacity: .32; }
 
@@ -1392,6 +1397,94 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       linear-gradient(currentColor, currentColor) center 16px / 24px 1.5px no-repeat,
       linear-gradient(currentColor, currentColor) center 24px / 24px 1.5px no-repeat,
       linear-gradient(currentColor, currentColor) center 32px / 24px 1.5px no-repeat; } }
+
+/* ── Round 8 · agenda, objective blocks, investments, market, lead gen, flow ── */
+.cover__pj { height: clamp(48px, 8vh, 96px); margin: 0 0 clamp(14px, 2.2vh, 26px); }
+.agenda .display--sm { font-size: clamp(18px, 2vw, 34px); }
+.obj { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 48px); margin-top: clamp(48px, 9vh, 110px); }
+.obj__i { border-top: 1px solid var(--line); padding-top: clamp(14px, 2.4vh, 26px); display: grid; gap: 8px; }
+.obj__i i { font-style: normal; font-size: 9.5px; letter-spacing: .3em; color: var(--accent); }
+.obj__t { font-family: var(--serif); font-size: clamp(20px, 2.1vw, 36px); letter-spacing: .12em; text-transform: uppercase; line-height: 1.05; }
+.obj__c { font-size: clamp(11px, .85vw, 14px); letter-spacing: .04em; color: var(--fg-mute); line-height: 1.55; }
+.invest { display: grid; gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.invest .eyebrow { background: var(--bg); margin: 0; padding-bottom: clamp(10px, 1.6vh, 18px); }
+.invest__i { background: var(--bg); display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 2vw, 32px); align-items: start; padding: clamp(14px, 2.2vh, 24px) 0; }
+.invest__i i { font-style: normal; font-size: 9.5px; letter-spacing: .3em; color: var(--accent); padding-top: 8px; }
+.invest__i > div { display: grid; gap: 6px; }
+.invest__t { font-family: var(--serif); font-size: clamp(20px, 2vw, 34px); letter-spacing: .12em; text-transform: uppercase; line-height: 1.05; }
+.invest__c { font-size: clamp(10px, .78vw, 12.5px); letter-spacing: .22em; text-transform: uppercase; color: var(--fg-mute); line-height: 1.6; }
+.invest__logo { height: clamp(26px, 3.6vh, 44px); width: auto; margin: 2px 0 4px; }
+.invest__amt { display: grid; gap: 4px; margin-top: 6px; }
+.invest__amt .count--md { font-size: clamp(44px, 4.6vw, 80px); line-height: .95; }
+.select__two { display: grid; gap: clamp(14px, 2.4vh, 28px); }
+.select__two .count { font-size: clamp(56px, 7vw, 132px); }
+.select__two .count__cap { margin-top: 4px; }
+.slide.s1 .engines { grid-template-columns: 1fr clamp(190px, 17vw, 300px) 1fr; }
+.engine { padding: 0 clamp(10px, 1.6vw, 32px); }
+.lg { position: relative; }
+.lg::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--line); }
+.lg__n { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 4.6vw, 78px); line-height: .9; color: var(--accent); margin-bottom: clamp(6px, 1vh, 12px); }
+.lg { margin-top: clamp(20px, 3.4vh, 40px); }
+.lg__foot { margin-top: clamp(18px, 3vh, 36px); padding-top: clamp(14px, 2.4vh, 28px); }
+.lg__foot .display--sm { font-size: clamp(20px, 2.2vw, 40px); }
+@media (max-width: 900px) { .obj { grid-template-columns: 1fr 1fr; } .lg::before { display: none; } }
+@media (max-width: 600px) {
+  .obj { grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; }
+  .obj__t { font-size: 17px; }
+  .obj__c { font-size: 11px; }
+  .agenda .display--sm { font-size: 16px; }
+  .cover__pj { height: 44px; }
+  .select__two { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .select__two .count { font-size: 44px; }
+  .invest__amt .count--md { font-size: 44px; }
+  .lg__n { font-size: 48px; }
+}
+
+/* ── Shared commitment · the flow ─────────────────────────────────────────── */
+.flowc { position: absolute; inset: 0; }
+.flowc__head { position: absolute; left: var(--pad); right: var(--pad); top: clamp(38px, 5.5vh, 60px); text-align: center; }
+.flowc__head .eyebrow { margin-bottom: clamp(8px, 1.2vh, 14px); }
+.flowc__fig { position: absolute; left: var(--pad); right: var(--pad); top: 50%; transform: translateY(-46%); }
+.flowc__fig svg { width: 100%; height: auto; overflow: visible; display: block; }
+.flowc text { font-family: var(--sans); font-weight: 500; font-size: 13.5px; letter-spacing: .26em; text-transform: uppercase; fill: var(--fg-mute); }
+.flowc text.t { font-family: var(--serif); font-weight: 400; font-size: 26px; letter-spacing: .14em; fill: var(--ivory); }
+.flowc text.amt { font-family: var(--serif); font-weight: 400; font-size: 68px; letter-spacing: .02em; fill: var(--ivory); }
+.flowc text.amt .cur { font-size: 30px; fill: var(--champagne); baseline-shift: 45%; }
+.flowc text.hi, .flowc tspan.hi { fill: var(--champagne); }
+.flowc text.big { font-family: var(--serif); font-size: 46px; letter-spacing: .22em; fill: var(--champagne); }
+.flowc text.pj { font-family: var(--serif); font-size: 24px; letter-spacing: .14em; fill: var(--ivory); }
+.flowc text.tag { font-size: 9.5px; letter-spacing: .44em; }
+.flowc text.ret-l { fill: var(--ivory); }
+.flowc .wire { fill: none; stroke: rgba(250,246,239,.5); stroke-width: 1; }
+.flowc .wire--gold { stroke: var(--champagne); opacity: .9; }
+.flowc .ret { fill: none; stroke: var(--champagne); stroke-width: 1.2; opacity: .9; }
+.flowc .arr { fill: none; stroke: var(--champagne); stroke-width: 1.2; }
+.flowc .core { fill: var(--onyx); stroke: var(--champagne); stroke-width: 1; }
+.flowc .halo { fill: none; stroke: var(--champagne); stroke-width: 1; opacity: .5; animation: pulse 6s ease-in-out infinite; }
+.flowc .node { fill: var(--ivory); }
+.flowc .node--gold { fill: var(--champagne); }
+.flowc .rider { fill: var(--champagne); }
+.flowc .rider-glow { fill: var(--champagne); opacity: .7; }
+.flowc__close { position: absolute; left: var(--pad); right: var(--pad); bottom: clamp(64px, 9vh, 96px); text-align: center; }
+.flowc .math__note { bottom: clamp(24px, 3.6vh, 40px); }
+.skin__list { display: none; }
+@media (max-width: 600px) {
+  .flowc { position: relative; inset: auto; min-height: 100%; padding: 84px 20px 150px; }
+  .flowc__head { position: static; text-align: left; margin-bottom: 18px; }
+  .flowc__fig { display: none; }
+  .skin__list { display: grid; gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .skin__row { background: var(--bg); display: grid; grid-template-columns: auto 1fr; gap: 14px; padding: 14px 0; }
+  .skin__row i { font-style: normal; font-size: 9.5px; letter-spacing: .3em; color: var(--accent); padding-top: 6px; }
+  .skin__row > div { display: grid; gap: 4px; }
+  .skin__t { font-family: var(--serif); font-size: 20px; letter-spacing: .1em; text-transform: uppercase; }
+  .skin__t b { font-weight: 400; }
+  .skin__t b[data-amount="currency"] { color: var(--accent); font-size: .7em; vertical-align: .3em; }
+  .skin__t.accent { color: var(--accent); }
+  .skin__c { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--fg-mute); line-height: 1.6; }
+  .skin__c b { font-weight: 500; color: var(--fg); }
+  .flowc__close { position: static; text-align: left; margin-top: 22px; }
+  .flowc .math__note { position: static; margin-top: 18px; }
+}
 </style>
 </head>
 <body>
@@ -1409,10 +1502,31 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
         <p class="eyebrow r" style="--d:.4s">A strategic conversation</p>
         <img class="logo logo--hero r scale" style="--d:.8s" data-logo="logoBns" alt="B&amp;S LUXURY — MIAMI">
         <div class="cover__rule ln ln--v" style="--d:1.6s"></div>
-        <p class="cover__meta r" style="--d:2s">Prepared for <b data-developer>[DEVELOPER NAME]</b><br><span data-project>[PROJECT NAME]</span> · <span data-project-loc>Location</span></p>
+        <img class="pj-logo cover__pj r" data-project-logo alt="" style="--d:1.9s" hidden>
+        <p class="cover__meta r" style="--d:2.3s">Prepared for <b data-developer>[DEVELOPER NAME]</b><br><span data-project>[PROJECT NAME]</span> · <span data-project-loc>Location</span></p>
       </div>
     </div>
     <p class="hint" id="hint">F · full screen &nbsp;&nbsp;·&nbsp;&nbsp; I · index &nbsp;&nbsp;·&nbsp;&nbsp; → · begin</p>
+  </section>
+
+  <!-- ══ TODAY · THE AGENDA ═══════════════════════════════════════════════ -->
+  <section class="slide" data-section="0" data-name="Opening" data-title="Today" data-auto="900">
+    <div class="slide__inner">
+      <div class="brings">
+        <div>
+          <p class="eyebrow r">Today</p>
+          <h2 class="display display--md r">What we would like <br><span class="accent">to share with you.</span></h2>
+        </div>
+        <div class="brings__list agenda">
+          <p class="display display--sm" data-step="1" style="--d:0s"><i>01</i>Who we are</p>
+          <p class="display display--sm" data-step="1" style="--d:.12s"><i>02</i>What we built · what we are investing</p>
+          <p class="display display--sm" data-step="1" style="--d:.24s"><i>03</i>The market · the gap</p>
+          <p class="display display--sm" data-step="1" style="--d:.36s"><i>04</i>Our infrastructure · offline, digital, people</p>
+          <p class="display display--sm" data-step="1" style="--d:.48s"><i>05</i>International reach</p>
+          <p class="display display--sm" data-step="1" style="--d:.6s"><i>06</i><span class="accent">The partnership · how to accelerate</span></p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ══ 01 · BIZ & STYLE ═════════════════════════════════════════════════ -->
@@ -1596,11 +1710,11 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
     <div class="slide__inner">
       <p class="eyebrow r">Our objective</p>
       <h2 class="display display--md r">Position B&amp;S Luxury <br>as a recognized force <br>in Miami <span class="accent">luxury real estate.</span></h2>
-      <div class="obj__row">
-        <span data-step="1" style="--d:0s"><i>01</i>Brand equity</span>
-        <span data-step="1" style="--d:.15s"><i>02</i>Visibility</span>
-        <span data-step="1" style="--d:.3s"><i>03</i>Relationships</span>
-        <span data-step="1" style="--d:.45s"><i>04</i>Deal flow</span>
+      <div class="obj">
+        <div class="obj__i" data-step="1" style="--d:0s"><i>01</i><span class="obj__t">Brand equity</span><span class="obj__c">The name developers, brokerages and capital recognise.</span></div>
+        <div class="obj__i" data-step="1" style="--d:.15s"><i>02</i><span class="obj__t">Visibility</span><span class="obj__c">Present where the market looks.</span></div>
+        <div class="obj__i" data-step="1" style="--d:.3s"><i>03</i><span class="obj__t">Relationships</span><span class="obj__c">Developers, brokers, partners, clients.</span></div>
+        <div class="obj__i" data-step="1" style="--d:.45s"><i>04</i><span class="obj__t">Deal flow</span><span class="obj__c">Opportunities created, not waited for.</span></div>
       </div>
     </div>
   </section>
@@ -1617,23 +1731,12 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
             <span class="r" style="--d:.65s">Seen by developers, brokerages and capital.</span>
             <span class="r hi" style="--d:.8s">A statement of intent, not a campaign.</span>
           </div>
-          <div class="onmap__invest" data-step="1" style="--d:0s">
-            <p class="eyebrow">Investing ahead of the business</p>
-            <div class="onmap__inv" data-step="1" style="--d:.2s"><span class="onmap__t">The team</span><span class="onmap__c">In-house · progressively · the top · equipped with the technology</span></div>
-            <div class="onmap__inv" data-step="1" style="--d:.4s"><span class="onmap__t">Digital infrastructure</span><span class="onmap__c">In-house · Google Ads · Meta · websites · CRM · tracking</span></div>
-          </div>
         </div>
-        <div class="onmap__logo">
-          <img class="r scale" style="--d:.5s" data-logo="logoRealDeal" alt="The Real Deal">
-          <div class="onmap__event r" style="--d:.8s">
-            <span class="serif-caps">Miami Forum</span>
-            <span class="caps">2025 &amp; 2026 editions · Exhibitor</span>
-            <span class="caps" style="margin-top:6px; color: var(--accent)">Where the industry meets</span>
-          </div>
-          <div class="onmap__commit r" style="--d:1.1s">
-            <div class="count count--md"><small>$</small><span data-count="250" data-suffix="K">0K</span></div>
-            <p class="caps count__cap">Committed over twelve months <br>to exhibit at the 2025 and 2026 editions</p>
-          </div>
+        <div class="invest">
+          <p class="eyebrow r" style="--d:.5s">Investing ahead of the business</p>
+          <div class="invest__i r" style="--d:.6s"><i>01</i><div><span class="invest__t">The team</span><span class="invest__c">In-house · progressively · the top · equipped with the technology</span></div></div>
+          <div class="invest__i" data-step="1" style="--d:0s"><i>02</i><div><span class="invest__t">Digital infrastructure</span><span class="invest__c">In-house · Google Ads · Meta · websites · CRM · tracking</span></div></div>
+          <div class="invest__i invest__i--rd" data-step="2" style="--d:0s"><i>03</i><div><img class="invest__logo" data-logo="logoRealDeal" alt="The Real Deal"><span class="invest__c">Miami Forum · exhibitor 2025 &amp; 2026 · where the industry meets</span><div class="invest__amt"><div class="count count--md"><small>$</small><span data-count="250" data-suffix="K">0K</span></div><span class="invest__c">Committed over twelve months</span></div></div></div>
         </div>
       </div>
     </div>
@@ -1682,7 +1785,7 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
   </section>
 
   <!-- ══ 11b · SELECTIVE PARTNERSHIPS ═════════════════════════════════════ -->
-  <section class="slide" data-section="2" data-name="The Market" data-title="The market we see">
+  <section class="slide" data-section="2" data-name="The Market" data-title="The market · the gap">
     <div class="media"><div class="media__img" data-photo="southOfFifth"></div><div class="media__veil"></div></div>
     <div class="field" aria-hidden="true">
       <!-- 120 developments; step 1 keeps the few we believe in, step 2 the one on this screen -->
@@ -1814,15 +1917,18 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       <div class="select">
         <div class="select__count">
           <p class="eyebrow r">The market we see · South Florida</p>
-          <div class="count r" style="--d:.3s"><span data-count="170" data-suffix="+">0+</span></div>
-          <p class="caps count__cap r" style="--d:.6s">New developments</p>
+          <div class="select__two">
+            <div class="r" style="--d:.3s"><div class="count"><span data-count="170" data-suffix="+">0+</span></div><p class="caps count__cap">New developments</p></div>
+            <div class="r" style="--d:.6s"><div class="count"><span data-count="60000" data-suffix="+">0+</span></div><p class="caps count__cap">Realtors, Miami alone</p></div>
+          </div>
         </div>
         <div class="select__lines">
-          <p class="display display--sm" data-step="1" style="--d:0s">We don't want them all.</p>
-          <p class="display display--sm" data-step="2" style="--d:0s">We select what we believe in.</p>
-          <p class="display display--sm" data-step="3" style="--d:0s">Selected. Not added.</p>
-          <p class="display display--sm" data-step="4" style="--d:0s">A limited number of projects. <br>A deeper level of commitment.</p>
-          <p class="display display--md" data-step="5" style="--d:0s">When we believe, <br><span class="accent">we go all in.</span></p>
+          <p class="display display--sm" data-step="1" style="--d:0s">Everyone promotes everything.</p>
+          <p class="display display--sm" data-step="2" style="--d:0s">The influencer approach.</p>
+          <p class="display display--sm" data-step="3" style="--d:0s">We don't follow it.</p>
+          <p class="display display--sm" data-step="4" style="--d:0s">We select what we believe in.</p>
+          <p class="display display--sm" data-step="5" style="--d:0s">A limited number of projects. <br>A deeper level of commitment.</p>
+          <p class="display display--md" data-step="6" style="--d:0s">When we believe, <br><span class="accent">we go all in.</span></p>
         </div>
       </div>
     </div>
@@ -1885,17 +1991,19 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       <h2 class="display display--md r">Digital lead generation. <br><span class="accent">Two components. Both in-house.</span></h2>
       <div class="lg">
         <div class="lg__col r" style="--d:.5s">
-          <p class="eyebrow">01 · The tech</p>
+          <div class="lg__n">01</div>
+          <p class="eyebrow">The tech</p>
           <p class="display display--sm">Built in-house.</p>
           <div class="list list--2">
-            <span>Google Ads</span><span>Meta</span>
-            <span>SEO · GEO / AI search</span><span>Project websites</span>
-            <span>Landing pages</span><span>CRM · tracking</span>
-            <span>Automation</span><span class="hi">Reporting</span>
+            <span class="r" style="--d:.7s">Google Ads</span><span class="r" style="--d:.78s">Meta</span>
+            <span class="r" style="--d:.86s">SEO · GEO / AI search</span><span class="r" style="--d:.94s">Project websites</span>
+            <span class="r" style="--d:1.02s">Landing pages</span><span class="r" style="--d:1.1s">CRM · tracking</span>
+            <span class="r" style="--d:1.18s">Automation</span><span class="r hi" style="--d:1.26s">Reporting</span>
           </div>
         </div>
         <div class="lg__col" data-step="1" style="--d:0s">
-          <p class="eyebrow">02 · The people</p>
+          <div class="lg__n">02</div>
+          <p class="eyebrow">The people</p>
           <p class="display display--sm">Converted in-house.</p>
           <div class="list">
             <span data-step="1" style="--d:.3s">A track record converting online-generated leads</span>
@@ -2061,60 +2169,86 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
     </div>
   </section>
 
-  <!-- ══ THE MECHANIC ═════════════════════════════════════════════════════ -->
-  <section class="slide" data-section="4" data-name="The Partnership" data-title="Skin in the game" data-auto="1600">
-    <div class="match">
-      <div class="match__head skin__head">
+  <!-- ══ SHARED COMMITMENT · THE FLOW ═════════════════════════════════════ -->
+  <section class="slide" data-section="4" data-name="The Partnership" data-title="Skin in the game" data-auto="1400">
+    <div class="flowc">
+      <div class="flowc__head">
         <p class="eyebrow r">Shared commitment · how it works</p>
         <p class="display display--sm eco__title r" style="--d:.2s">Skin in the game. <span class="accent">On both sides.</span></p>
       </div>
-      <div class="match__layer">
-        <div class="sum__in">
-          <!-- for every $100 you commit, we put $100 of our own into pure media -->
-          <div class="sum skin">
-            <div class="sum__cell" data-step="1" style="--d:0s">
-              <p class="eyebrow">You</p>
-              <div class="count count--md"><small data-amount="currency">$</small><span data-amount-count="developer">0</span></div>
-              <span class="serif-caps">Your commitment</span>
-              <span class="caps">A temporary advance</span>
-            </div>
-            <div class="sum__op" data-step="2" style="--d:0s">+</div>
-            <div class="sum__cell" data-step="2" style="--d:.2s">
-              <p class="eyebrow">Us</p>
-              <div class="count count--md"><small data-amount="currency">$</small><span data-amount-count="bns">0</span></div>
-              <span class="serif-caps">Our match, <br>in pure media</span>
-              <span class="caps accent">Google Ads · Meta · to the platforms, not to us</span>
-            </div>
-            <div class="sum__op" data-step="3" style="--d:0s">=</div>
-            <div class="sum__cell sum__cell--result" data-step="3" style="--d:.2s">
-              <p class="eyebrow">The goal</p>
-              <span class="serif-caps">Sales</span>
-              <span class="caps">Luxury ecosystem · lead generation <br>broker community · international reach</span>
-            </div>
-          </div>
-          <div class="skin__rail" aria-hidden="true">
-            <!-- the money goes to work (step 3) and comes back (step 4) -->
-            <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
-              <defs><filter id="skinblur" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="6"/></filter></defs>
-              <path class="skin__line draw" data-step="3" pathLength="1" d="M120 20 H1080" style="--d:0s"/>
-              <path class="skin__line skin__line--back draw" data-step="4" pathLength="1" d="M1080 60 H120" style="--d:0s"/>
-              <g class="fade" data-step="3" style="--d:.6s"><g><animateMotion dur="5s" repeatCount="indefinite" path="M120 20 H1080"/><circle class="skin__glow" r="10" filter="url(#skinblur)"/><circle class="skin__rider" r="3.5"/></g></g>
-              <g class="fade" data-step="4" style="--d:.4s"><g><animateMotion dur="5s" repeatCount="indefinite" path="M1080 60 H120"/><circle class="skin__glow" r="10" filter="url(#skinblur)"/><circle class="skin__rider" r="3.5"/></g></g>
-            </svg>
-            <span class="caps skin__lab skin__lab--a" data-step="3" style="--d:.3s">Your money goes to media. Our goal is sales.</span>
-            <span class="caps skin__lab skin__lab--b" data-step="4" style="--d:.2s">At the first commission, your <b data-amount="currency">$</b><b data-amount="developer">100</b> comes back.</span>
-          </div>
-          <div class="skin__gets" data-step="5" style="--d:0s">
-            <p class="eyebrow">What your commitment unlocks</p>
-            <div class="skin__grid">
-              <div class="skin__get" data-step="5" style="--d:.2s"><span class="serif-caps">The ecosystem</span><span class="caps">Access to the luxury network</span></div>
-              <div class="skin__get" data-step="5" style="--d:.35s"><span class="serif-caps">A sales team</span><span class="caps">An additional force pushing your project</span></div>
-              <div class="skin__get" data-step="5" style="--d:.5s"><span class="serif-caps">International exposure</span><span class="caps">Relationships, partners, referrals</span></div>
-              <div class="skin__get skin__get--hi" data-step="5" style="--d:.65s"><span class="serif-caps">Lead generation</span><span class="caps">And its management — a serious budget if bought on the market</span></div>
-            </div>
-          </div>
-          <p class="display display--sm skin__close" data-step="6" style="--d:0s">A temporary advance. <span class="accent">We win when you win.</span></p>
-        </div>
+      <div class="flowc__fig">
+        <!-- two commitments enter the project: yours opens the partnership, ours goes
+             to pure media. Both meet in the development and end in sales; at the first
+             commission your advance comes back along the gold return path. -->
+        <svg viewBox="0 0 1600 720" aria-hidden="true">
+          <defs><filter id="flowcblur" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+
+          <!-- you -->
+          <g class="fade" data-step="1" style="--d:0s">
+            <text x="60" y="176">You</text>
+            <text class="amt" x="60" y="250"><tspan class="cur">$</tspan><tspan data-amount-count="developer">0</tspan></text>
+            <text class="t" x="60" y="292">Your commitment</text>
+            <text x="60" y="322">A temporary advance</text>
+          </g>
+          <path class="wire draw" data-step="1" pathLength="1" d="M330 240 H470" style="--d:.5s"/>
+          <g class="fade" data-step="1" style="--d:1s">
+            <circle class="node" cx="480" cy="240" r="4"/>
+            <text class="t" x="500" y="204">The partnership</text>
+            <text x="500" y="236">The ecosystem</text>
+            <text x="500" y="260">A sales team pushing your project</text>
+            <text x="500" y="284">International exposure</text>
+            <text class="hi" x="500" y="308">Lead generation and its management</text>
+          </g>
+
+          <!-- us -->
+          <g class="fade" data-step="2" style="--d:0s">
+            <text x="60" y="476">Us</text>
+            <text class="amt" x="60" y="550"><tspan class="cur">$</tspan><tspan data-amount-count="bns">0</tspan></text>
+            <text class="t" x="60" y="592">Our match</text>
+            <text x="60" y="622">Our own capital</text>
+          </g>
+          <path class="wire draw" data-step="2" pathLength="1" d="M330 540 H470" style="--d:.5s"/>
+          <g class="fade" data-step="2" style="--d:1s">
+            <circle class="node" cx="480" cy="540" r="4"/>
+            <text class="t" x="500" y="528">Pure media</text>
+            <text x="500" y="560">Google Ads · Meta</text>
+            <text class="hi" x="500" y="584">To the platforms, not to us</text>
+          </g>
+
+          <!-- both meet in the development -->
+          <path class="wire wire--gold draw" data-step="3" pathLength="1" d="M900 240 C 980 240, 990 330, 1052 356" style="--d:0s"/>
+          <path class="wire wire--gold draw" data-step="3" pathLength="1" d="M900 540 C 980 540, 990 450, 1052 424" style="--d:.15s"/>
+          <circle class="halo" cx="1140" cy="390" r="92" style="transform-origin:1140px 390px"/>
+          <circle class="core draw" data-step="3" pathLength="1" cx="1140" cy="390" r="92" style="--d:.4s"/>
+          <text class="pj fade" data-step="3" x="1140" y="386" text-anchor="middle" data-project-short style="--d:.8s">[PROJECT NAME]</text>
+          <text class="tag fade" data-step="3" x="1140" y="414" text-anchor="middle" style="--d:1s">SELECTED DEVELOPMENT</text>
+          <path class="wire wire--gold draw" data-step="3" pathLength="1" d="M1232 390 H1370" style="--d:1.1s"/>
+          <g class="fade" data-step="3" style="--d:1.5s">
+            <circle class="node node--gold" cx="1380" cy="390" r="5"/>
+            <text x="1400" y="368">The goal</text>
+            <text class="big" x="1400" y="412">Sales</text>
+          </g>
+          <g class="fade" data-step="3" style="--d:1.8s"><g><animateMotion dur="6s" repeatCount="indefinite" path="M330 540 H470 H900 C 980 540, 990 450, 1052 424 L1232 390 H1370"/><circle class="rider-glow" r="11" filter="url(#flowcblur)"/><circle class="rider" r="3.5"/></g></g>
+
+          <!-- the return -->
+          <path class="ret draw" data-step="4" pathLength="1" d="M1380 372 C 1380 40, 200 40, 200 150" style="--d:0s"/>
+          <path class="arr fade" data-step="4" d="M190 138 L200 152 L210 138" style="--d:1.6s"/>
+          <text class="ret-l fade" data-step="4" x="790" y="52" text-anchor="middle" style="--d:.9s">At the first commission, your <tspan class="hi">$<tspan data-amount="developer">100</tspan></tspan> comes back</text>
+          <g class="fade" data-step="4" style="--d:1.8s"><g><animateMotion dur="7s" repeatCount="indefinite" path="M1380 372 C 1380 40, 200 40, 200 150"/><circle class="rider-glow" r="11" filter="url(#flowcblur)"/><circle class="rider" r="3.5"/></g></g>
+        </svg>
+      </div>
+
+      <!-- phone: the same five stations as a list -->
+      <div class="skin__list">
+        <div class="skin__row" data-step="1" style="--d:0s"><i>01</i><div><span class="skin__t">You · <b data-amount="currency">$</b><b data-amount="developer">100</b></span><span class="skin__c">Your commitment · a temporary advance · it opens the partnership: the ecosystem, a sales team, international exposure, lead generation and its management</span></div></div>
+        <div class="skin__row" data-step="2" style="--d:0s"><i>02</i><div><span class="skin__t">Us · <b data-amount="currency">$</b><b data-amount="bns">100</b></span><span class="skin__c">Our match, our own capital · pure media · Google Ads · Meta · to the platforms, not to us</span></div></div>
+        <div class="skin__row" data-step="3" style="--d:0s"><i>03</i><div><span class="skin__t" data-project-short>[PROJECT NAME]</span><span class="skin__c">Both commitments meet in the development</span></div></div>
+        <div class="skin__row" data-step="3" style="--d:.2s"><i>04</i><div><span class="skin__t accent">Sales</span><span class="skin__c">The goal</span></div></div>
+        <div class="skin__row" data-step="4" style="--d:0s"><i>05</i><div><span class="skin__t">First commission</span><span class="skin__c">Your <b data-amount="currency">$</b><b data-amount="developer">100</b> comes back</span></div></div>
+      </div>
+
+      <div class="flowc__close" data-step="5" style="--d:0s">
+        <p class="display display--sm">A temporary advance. <span class="accent">We win when you win.</span></p>
       </div>
       <p class="math__note r" style="--d:.8s">Illustrative example. Subject to final written agreement, brokerage approval and applicable developer / brokerage terms.</p>
     </div>
@@ -2150,7 +2284,7 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
     <div class="chrome__section" id="sectionLabel"><span></span></div>
     <button class="chrome__idx" id="idx" title="Slide index (I)"><span>Index</span></button>
   </div>
-  <div class="chrome__count" id="count">01 — 14</div>
+  <div class="chrome__count" id="count">01 — 15</div>
   <div class="chrome__nav" id="nav"></div>
   <div class="chrome__biz">
     <button class="chrome__fs" id="fs" title="Full screen (F)"></button>
@@ -2284,7 +2418,7 @@ const SECTIONS = ['Opening', 'Who We Are', 'The Market', 'The Engines', 'The Par
   document.querySelectorAll('[data-project-price]').forEach(el => { if (PROJECT.priceRange) { el.textContent = PROJECT.priceRange; el.hidden = false; } });
   document.querySelectorAll('[data-event]').forEach(el => { if (PROJECT.event) { el.textContent = PROJECT.event; el.hidden = false; } });
   document.querySelectorAll('[data-contact]').forEach(el => { if (PROJECT.contact) { el.textContent = PROJECT.contact; el.hidden = false; } });
-  document.querySelectorAll('[data-project-logo]').forEach(el => { if (PROJECT.logo) { el.src = PROJECT.logo; el.hidden = false; el.nextElementSibling.hidden = true; } });
+  document.querySelectorAll('[data-project-logo]').forEach(el => { if (PROJECT.logo) { el.src = PROJECT.logo; el.hidden = false; const n = el.nextElementSibling; if (n && n.hasAttribute('data-project')) n.hidden = true; } });
   document.querySelectorAll('[data-project-photo]').forEach(el => { el.style.backgroundImage = `url("${(PROJECT.images && PROJECT.images[0]) || ASSETS.brickell}")`; });
   document.querySelectorAll('[data-project-reasons]').forEach(el => {
     el.innerHTML = (PROJECT.whySelected || []).slice(0, 5).map((r, i) =>
