@@ -331,7 +331,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .org__logo { width: clamp(260px, 30vw, 460px); }
 .org__logo img { width: 100%; }
 .org__sub { margin: clamp(18px, 3vh, 30px) 0 0; }
-.org__lede { text-align: center; max-width: 52ch; margin: clamp(12px, 2vh, 22px) auto 0; font-size: clamp(13px, 1vw, 17px); }
+.org__lede { text-align: center; max-width: 46ch; margin: clamp(30px, 5vh, 56px) auto 0; font-family: var(--serif); font-size: clamp(18px, 1.7vw, 30px); line-height: 1.3; color: var(--fg-mute); }
 .org__stem { width: 1px; height: clamp(44px, 9vh, 96px); background: var(--line); margin-top: clamp(28px, 5vh, 56px); }
 .org__bar { width: calc(100% / 3 * 2); height: 1px; background: var(--line); }
 .org__nodes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
@@ -665,7 +665,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 
 /* ── 12 · Talent ───────────────────────────────────────────────────────────── */
 .talent { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(30px, 5vw, 90px); align-items: center; }
-.talent__ring { position: relative; width: 100%; max-width: min(66vh, 680px); margin-left: auto; }
+.talent__ring { position: relative; width: 100%; max-width: min(64vh, 640px); margin-left: 0; margin-right: auto; }
 .talent__ring svg { width: 100%; height: auto; overflow: visible; }
 .talent__ring text { font-family: var(--sans); font-weight: 500; font-size: 17px; letter-spacing: .28em; word-spacing: -.12em; text-transform: uppercase; fill: var(--fg); }
 .talent__ring text.c { font-family: var(--serif); font-weight: 400; font-size: 26px; letter-spacing: .2em; }
@@ -1134,7 +1134,7 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
   .org__in { width: 92vw; }
   .org__logo { width: 62vw; }
   .org__stem, .org__drop { height: 34px; }
-  .org__lede { font-size: 12px; max-width: 34ch; }
+  .org__lede { font-size: 15px; max-width: 30ch; margin-top: 22px; }
   .org__label { font-size: 12px; letter-spacing: .16em; margin-right: -.16em; }
   .org__labelwrap { padding: 14px 6px; }
   .org__cap { display: none; }
@@ -1411,9 +1411,9 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
 .obj__i i { font-style: normal; font-size: 9.5px; letter-spacing: .3em; color: var(--accent); }
 .obj__t { font-family: var(--serif); font-size: clamp(20px, 2.1vw, 36px); letter-spacing: .12em; text-transform: uppercase; line-height: 1.05; }
 .obj__c { font-size: clamp(11px, .85vw, 14px); letter-spacing: .04em; color: var(--fg-mute); line-height: 1.55; }
-.invest { display: grid; gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.invest .eyebrow { background: var(--bg); margin: 0; padding-bottom: clamp(10px, 1.6vh, 18px); }
-.invest__i { background: var(--bg); display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 2vw, 32px); align-items: start; padding: clamp(14px, 2.2vh, 24px) 0; }
+.invest { display: grid; gap: clamp(10px, 1.6vh, 16px); }
+.invest .eyebrow { margin: 0 0 4px; }
+.invest__i { background: rgba(140,122,85,.07); border: 1px solid rgba(140,122,85,.35); border-left: 3px solid var(--accent); display: grid; grid-template-columns: auto 1fr; gap: clamp(14px, 1.8vw, 28px); align-items: start; padding: clamp(14px, 2.2vh, 24px) clamp(16px, 1.8vw, 28px); }
 .invest__i i { font-style: normal; font-size: 9.5px; letter-spacing: .3em; color: var(--accent); padding-top: 8px; }
 .invest__i > div { display: grid; gap: 6px; }
 .invest__t { font-family: var(--serif); font-size: clamp(20px, 2vw, 34px); letter-spacing: .12em; text-transform: uppercase; line-height: 1.05; }
@@ -1520,6 +1520,14 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
   .skin__t b { font-size: 26px; }
   .skin__c { font-size: 10.5px; }
 }
+
+/* ── Round 10 · flags, checkpoints ────────────────────────────────────────── */
+.done__flags { display: flex; flex-wrap: wrap; gap: clamp(14px, 2vw, 36px); }
+.done__flags .caps { color: var(--fg); display: inline-flex; align-items: center; gap: 10px; }
+.done__flags i { font-style: normal; color: var(--accent); font-size: 14px; }
+.lg__ck { position: relative; padding-left: 20px; }
+.lg__ck::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 12px; }
+@media (max-width: 600px) { .done__flags { flex-direction: column; gap: 8px; } }
 </style>
 </head>
 <body>
@@ -1574,7 +1582,6 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       <div class="org__in">
         <div class="org__logo r scale"><img data-logo="logoBizStyle" alt="BIZ &amp; STYLE"></div>
         <p class="eyebrow org__sub r">Business Development Platform</p>
-        <p class="lede org__lede r" style="--d:.5s">A Miami-based business development platform built around the luxury ecosystem, designed to compound growth and scale globally.</p>
         <div class="org__stem ln ln--v"></div>
         <div class="org__bar ln ln--c"></div>
         <div class="org__nodes">
@@ -1591,6 +1598,7 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
             <div class="org__labelwrap"><span class="org__ring"></span><span class="org__label r">Luxury</span><span class="org__cap">Real Estate · Lifestyle · Partnerships</span></div>
           </div>
         </div>
+        <p class="org__lede r" style="--d:1.2s">A Miami-based business development platform built around the luxury ecosystem, designed to compound growth and scale globally.</p>
       </div>
     </div>
     <i data-step="1" hidden></i>
@@ -2035,10 +2043,10 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
           <p class="display display--sm">The tech</p>
           <p class="caps lg__sub">Built in-house</p>
           <div class="lg__box list list--2">
-            <span class="r" style="--d:.7s">Google Ads</span><span class="r" style="--d:.78s">Meta</span>
-            <span class="r" style="--d:.86s">SEO · GEO / AI search</span><span class="r" style="--d:.94s">Project websites</span>
-            <span class="r" style="--d:1.02s">Landing pages</span><span class="r" style="--d:1.1s">CRM · tracking</span>
-            <span class="r" style="--d:1.18s">Automation</span><span class="r hi" style="--d:1.26s">Reporting</span>
+            <span class="r lg__ck" style="--d:.7s">Google Ads</span><span class="r lg__ck" style="--d:.78s">Meta</span>
+            <span class="r lg__ck" style="--d:.86s">SEO · GEO / AI search</span><span class="r lg__ck" style="--d:.94s">Project websites</span>
+            <span class="r lg__ck" style="--d:1.02s">Landing pages</span><span class="r lg__ck" style="--d:1.1s">CRM · tracking</span>
+            <span class="r lg__ck" style="--d:1.18s">Automation</span><span class="r hi lg__ck" style="--d:1.26s">Reporting</span>
           </div>
         </div>
         <div class="lg__col" data-step="1" style="--d:0s">
@@ -2046,11 +2054,11 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
           <p class="display display--sm">The people</p>
           <p class="caps lg__sub">Converted in-house</p>
           <div class="lg__box list">
-            <span data-step="1" style="--d:.3s">A track record converting online-generated leads</span>
-            <span data-step="1" style="--d:.45s">Selling Miami: every price point, every area</span>
-            <span data-step="1" style="--d:.6s">New developments with the leading developers: PMG, Terra, Continuum…</span>
-            <span data-step="1" style="--d:.75s">Specialists who come from the online school</span>
-            <span data-step="1" style="--d:.9s" class="hi">Former top producers from Miami's new developments</span>
+            <span data-step="1" class="lg__ck" style="--d:.3s">A track record converting online-generated leads</span>
+            <span data-step="1" class="lg__ck" style="--d:.45s">Selling Miami: every price point, every area</span>
+            <span data-step="1" class="lg__ck" style="--d:.6s">New developments with the leading developers: PMG, Terra, Continuum…</span>
+            <span data-step="1" class="lg__ck" style="--d:.75s">Specialists who come from the online school</span>
+            <span data-step="1" class="lg__ck hi" style="--d:.9s">Former top producers from Miami's new developments</span>
           </div>
         </div>
       </div>
@@ -2198,10 +2206,10 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
           <p class="eyebrow r"><span data-project>[PROJECT NAME]</span> · <span data-project-loc>Location</span></p>
           <h2 class="display display--md r">We already <span class="accent">selected it.</span></h2>
         </div>
-        <div class="done__tiles">
-          <div class="done__t" data-step="1" style="--d:0s"><i>01</i><span>Website built</span></div>
-          <div class="done__t" data-step="1" style="--d:.15s"><i>02</i><span>Campaigns running</span></div>
-          <div class="done__t" data-step="1" style="--d:.3s"><i>03</i><span>Resources committed</span></div>
+        <div class="done__flags">
+          <span class="caps" data-step="1" style="--d:0s"><i>✓</i>Website built</span>
+          <span class="caps" data-step="1" style="--d:.15s"><i>✓</i>Campaigns running</span>
+          <span class="caps" data-step="1" style="--d:.3s"><i>✓</i>Resources committed</span>
         </div>
         <div class="done__lines">
           <p class="display display--sm" data-step="2" style="--d:0s">It's already happening.</p>
