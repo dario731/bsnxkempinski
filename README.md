@@ -56,6 +56,7 @@ the top of the `<script>` in `index.html`:
 | --- | --- |
 | `name`, `shortName` | cover, the integrated ecosystem, "Integrated", "Already committed", next step. `shortName` (≤ 16 characters) is used inside the circles |
 | `developer`, `location` | cover, "Already committed" |
+| `partner`, `partnerLogo` | optional sales & marketing partner (ISG World now): its mark beside the project mark on the cover, its name beside the developer |
 | `logo` | the project mark on "Next step" (a dark mark on a transparent SVG or PNG; it is inverted to white) |
 | `currency`, `partnership`, `match` | the two amounts on "Skin in the game" (default `100` and `100`, an illustrative unit; the counters animate to whatever you set) |
 | `event` | optional invitation line on "Next step" |

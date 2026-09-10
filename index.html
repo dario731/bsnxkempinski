@@ -1399,7 +1399,10 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
       linear-gradient(currentColor, currentColor) center 32px / 24px 1.5px no-repeat; } }
 
 /* ── Round 8 · agenda, objective blocks, investments, market, lead gen, flow ── */
-.cover__pj { height: clamp(48px, 8vh, 96px); margin: 0 0 clamp(14px, 2.2vh, 26px); }
+.cover__pj { height: clamp(48px, 8vh, 96px); margin: 0; }
+.cover__marks { display: flex; align-items: center; justify-content: center; gap: clamp(18px, 2.2vw, 36px); margin: 0 0 clamp(14px, 2.2vh, 26px); }
+.cover__sep { width: 1px; height: clamp(30px, 5vh, 56px); background: rgba(250,246,239,.3); }
+.cover__partner { height: clamp(14px, 2.4vh, 26px); width: auto; filter: invert(1); opacity: .92; }
 .agenda .display--sm { font-size: clamp(18px, 2vw, 34px); }
 .obj { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 48px); margin-top: clamp(48px, 9vh, 110px); }
 .obj__i { border-top: 1px solid var(--line); padding-top: clamp(14px, 2.4vh, 26px); display: grid; gap: 8px; }
@@ -1433,6 +1436,8 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
   .obj__c { font-size: 11px; }
   .agenda .display--sm { font-size: 16px; }
   .cover__pj { height: 44px; }
+  .cover__partner { height: 13px; }
+  .cover__sep { height: 28px; }
   .select__two { grid-template-columns: 1fr 1fr; gap: 12px; }
   .select__two .count { font-size: 44px; }
   .invest__amt .count--md { font-size: 44px; }
@@ -1530,8 +1535,12 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
         <p class="eyebrow r" style="--d:.4s">A strategic conversation</p>
         <img class="logo logo--hero r scale" style="--d:.8s" data-logo="logoBns" alt="B&amp;S LUXURY — MIAMI">
         <div class="cover__rule ln ln--v" style="--d:1.6s"></div>
-        <img class="pj-logo cover__pj r" data-project-logo alt="" style="--d:1.9s" hidden>
-        <p class="cover__meta r" style="--d:2.3s">Prepared for <b data-developer>[DEVELOPER NAME]</b><br><span data-project>[PROJECT NAME]</span> · <span data-project-loc>Location</span></p>
+        <div class="cover__marks r" style="--d:1.9s">
+          <img class="pj-logo cover__pj" data-project-logo alt="" hidden>
+          <span class="cover__sep" data-partner-logo-sep hidden></span>
+          <img class="cover__partner" data-partner-logo alt="" hidden>
+        </div>
+        <p class="cover__meta r" style="--d:2.3s">Prepared for <b data-developer>[DEVELOPER NAME]</b><span data-partner-wrap hidden> · <b data-partner>Partner</b></span><br><span data-project>[PROJECT NAME]</span> · <span data-project-loc>Location</span></p>
       </div>
     </div>
     <p class="hint" id="hint">F · full screen &nbsp;&nbsp;·&nbsp;&nbsp; I · index &nbsp;&nbsp;·&nbsp;&nbsp; → · begin</p>
@@ -2375,6 +2384,8 @@ const PROJECT = {
   shortName:   'Kempinski',             // short form for circles (≤ 16 chars); falls back to name
   developer:   'DaGrosa Capital Development Partners', // the developer / sponsor
   location:    'Miami Design District',
+  partner:     'ISG World',              // optional: the sales & marketing partner, shown beside the developer on the cover
+  partnerLogo: 'assets/logos/isg-world.svg', // optional: its mark (dark on transparent; inverted to white)
   logo:        'assets/logos/kempinski-residences.svg', // optional: the project mark (a dark mark on transparent; it is inverted to white on the dark slide)
   images:      ['assets/photos/kempinski-towers.jpg', 'assets/photos/kempinski-dusk.jpg', 'assets/photos/kempinski-aerial.jpg'], // project renderings
   video:       '',                      // optional: reserved for a project film on the cover
@@ -2450,6 +2461,10 @@ const SECTIONS = ['Opening', 'Who We Are', 'The Market', 'The Engines', 'The Par
   document.querySelectorAll('[data-event]').forEach(el => { if (PROJECT.event) { el.textContent = PROJECT.event; el.hidden = false; } });
   document.querySelectorAll('[data-contact]').forEach(el => { if (PROJECT.contact) { el.textContent = PROJECT.contact; el.hidden = false; } });
   document.querySelectorAll('[data-project-logo]').forEach(el => { if (PROJECT.logo) { el.src = PROJECT.logo; el.hidden = false; const n = el.nextElementSibling; if (n && n.hasAttribute('data-project')) n.hidden = true; } });
+  document.querySelectorAll('[data-partner]').forEach(el => { el.textContent = PROJECT.partner || ''; });
+  document.querySelectorAll('[data-partner-wrap]').forEach(el => { el.hidden = !PROJECT.partner; });
+  document.querySelectorAll('[data-partner-logo]').forEach(el => { if (PROJECT.partnerLogo) { el.src = PROJECT.partnerLogo; el.hidden = false; } });
+  document.querySelectorAll('[data-partner-logo-sep]').forEach(el => { el.hidden = !(PROJECT.partnerLogo && PROJECT.logo); });
   document.querySelectorAll('[data-project-photo]').forEach(el => { el.style.backgroundImage = `url("${(PROJECT.images && PROJECT.images[0]) || ASSETS.brickell}")`; });
   document.querySelectorAll('[data-project-reasons]').forEach(el => {
     el.innerHTML = (PROJECT.whySelected || []).slice(0, 5).map((r, i) =>
