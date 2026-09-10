@@ -475,17 +475,18 @@ body.theme-light .chrome__progress { background: rgba(0,0,0,.08); }
 .onmap__tl { height: clamp(14px, 1.8vh, 22px); width: auto; filter: grayscale(1) brightness(.2); opacity: .85; margin: 2px 0; }
 .onmap__c { font-family: var(--sans); font-size: clamp(10px, .78vw, 12.5px); letter-spacing: .22em; text-transform: uppercase; color: var(--fg-mute); line-height: 1.6; }
 .onmap__c b { font-weight: 500; color: var(--fg); }
-.map--world svg { top: 15vh; height: 64vh; }
-.map--world .land { fill: rgba(250,246,239,.26); }
-.map--world text { font-family: var(--sans); font-weight: 500; font-size: 14px; letter-spacing: .3em; fill: var(--fg-mute); }
-.map--world text.base { font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: .34em; fill: var(--ivory); }
-.map--world .arc { stroke: rgba(250,246,239,.7); stroke-width: 1; opacity: 1; }
-.map--world .mid { fill: var(--ivory); }
-.map--world .pt { fill: var(--ivory); }
-.map--world .pt--base { fill: var(--ivory); }
-.map--world .pulse { stroke: rgba(250,246,239,.6); animation-duration: 4s; }
-.map--world .pulse--2 { animation-delay: 2s; }
-@media (max-width: 600px) { .map--world svg { top: 22vh; height: 40vh; } .map--world text { font-size: 30px; } .map--world text.base { font-size: 40px; } }
+.map.map--world svg { top: 27vh; height: 52vh; }
+.map.map--world text:not(.base) { display: none; }
+.map.map--world .land { fill: rgba(250,246,239,.26); }
+.map.map--world text { font-family: var(--sans); font-weight: 500; font-size: 14px; letter-spacing: .3em; fill: var(--fg-mute); }
+.map.map--world text.base { font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: .34em; fill: var(--ivory); }
+.map.map--world .arc { stroke: rgba(250,246,239,.7); stroke-width: 1; opacity: 1; }
+.map.map--world .mid { fill: var(--ivory); }
+.map.map--world .pt { fill: var(--ivory); }
+.map.map--world .pt--base { fill: var(--ivory); }
+.map.map--world .pulse { stroke: rgba(250,246,239,.6); animation-duration: 4s; }
+.map.map--world .pulse--2 { animation-delay: 2s; }
+@media (max-width: 600px) { .map.map--world svg { top: 22vh; height: 40vh; } .map.map--world text { font-size: 30px; } .map.map--world text.base { font-size: 40px; } }
 .onmap__commit { display: grid; gap: 0; padding-top: clamp(18px, 3vh, 32px); margin-top: clamp(18px, 3vh, 32px); border-top: 1px solid var(--line); width: min(100%, 520px); }
 
 /* ── 06 · Long game ────────────────────────────────────────────────────────── */
@@ -1375,6 +1376,8 @@ body.theme-light .chrome__arrow { border-color: rgba(14,13,11,.3); background: r
   .sys__fig--four text.lab-l { transform: translate(25px, -40px); }
   .sys__fig--four text.lab-r { transform: translate(-25px, -40px); }
   .match__layer { padding-bottom: 150px; }
+  .map__statement { bottom: 140px; right: 20px; }
+  .map.map--world svg { top: 24vh; height: 42vh; }
 }
 
 /* ── Menu button: a 44px hit area, three lines centred ────────────────────── */
